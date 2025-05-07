@@ -1,0 +1,15 @@
+<div id="container">
+    <h2>Login</h2>
+    <p>
+        <span>Username: </span>
+        <input class="form-control" [(ngModel)]="user.username" type="text">
+    </p>
+    <p>
+        <span>Password: </span>
+        <input class="form-control" [(ngModel)]="user.password" type="text">
+    </p>
+
+    <p>
+        <button type="button" class="btn btn-primary" (click)="this.login()">Continuar</button>
+    </p>
+</div>
