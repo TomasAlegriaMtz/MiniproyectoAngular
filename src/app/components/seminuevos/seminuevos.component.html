@@ -1,1 +1,53 @@
-<p>seminuevos works!</p>
+<body>
+    @if (array.length != 0) {
+    <div id="mitabla">
+        <table class="table table-hover table-dark table-bordered table-striped table-xl">
+            <thead>
+                <tr>
+                    <th scope="col" colspan="12" style="text-align: center;">Datos de Vehículos</th>
+                </tr>
+            </thead>
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Marca</th>
+                    <th scope="col">Modelo</th>
+                    <th scope="col">Año</th>
+                    <th scope="col">Color</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Combustible</th>
+                    <th scope="col">Transmisión</th>
+                    <th scope="col">Kilometraje</th>
+                    <th scope="col">Ubicación</th>
+                    <th scope="col">Características</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (item of array; track item) {
+                <tr>
+                    <td>{{ item.id }}</td>
+                    <td>{{ item.brand }}</td>
+                    <td>{{ item.model }}</td>
+                    <td>{{ item.year }}</td>
+                    <td>{{ item.color }}</td>
+                    <td>${{ item.price.toFixed(2) }}</td>
+                    <td>{{ item.fuel_type }}</td>
+                    <td>{{ item.transmission }}</td>
+                    <td>{{ item.mileage }} km</td>
+                    <td>{{ item.location }}</td>
+                    <td colspan="10">
+                        <strong>Características:</strong>
+                        <ul>
+                            @for (feature of item.features; track feature) {
+                                <li>{{ feature }}</li>
+                            }
+                        </ul>
+                        <strong>Disponible:</strong> {{ item.available ? "Sí" : "No" }}
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    }
+</body>
