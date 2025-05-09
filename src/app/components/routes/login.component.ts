@@ -50,6 +50,8 @@ export class LoginComponent {
         title: '¡Acceso concedido!',
         text: `Bienvenido, ${acc.username}`,
       });
+      localStorage.setItem('userLogueado', JSON.stringify(this.formulario.get('username')?.value));
+      
     } else {
       Swal.fire({
         icon: 'error',
