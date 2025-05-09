@@ -1,0 +1,105 @@
+<section class="container">
+
+ 
+  <div class="header">
+    <h1>PURE DRIVING PLEASURE</h1>
+    <div class="buttons">
+      <button  (click)="nuevos()">NUEVOS</button>
+      <button  (click)="seminuevos()">SEMINUEVOS</button>
+    </div>
+  </div>
+
+  
+        <form #testDriveForm="ngForm" (ngSubmit)="onTestDriveSubmit()">
+          <!-- Modelo del Auto -->
+          <div class="inp">
+            <label for="model" class="form-label">Modelo del Auto</label>
+            <select
+              id="model"
+              name="model"
+              [(ngModel)]="testDriveModel.model"
+              class="form-select"
+              required
+              #modelControl="ngModel"
+            >
+              <option value="">Selecciona un modelo</option>
+              @for (item of carModels; track item) {
+                <option >{{ item.model }}</option>
+              }
+            </select>
+            @if (modelControl.invalid && (modelControl.dirty || modelControl.touched)) {
+              <div class="alert alert-danger">
+                El modelo es requerido
+              </div>
+            }
+          </div>
+          <!--Email-->
+        <div class="inp">
+            <label class="form-label">Email:</label>
+            <input
+              type="email"
+              [(ngModel)]="testDriveModel.email"
+              name="email"
+              #emailT="ngModel"
+              required
+              email
+            />
+            
+            @if (emailT.invalid && (emailT.dirty || emailT.touched)) {
+              @if (emailT.errors?.['required']) {
+                <div class="alert alert-danger">Campo requerido</div>
+              }
+              @if (emailT.errors?.['email']) {
+                <div class="alert alert-danger">Email no válido</div>
+              }
+            }
+          </div>
+
+
+
+          
+          <div class="inp">
+            <label class="form-label">Tipo de Prueba</label>
+            <mat-radio-group [(ngModel)]="testDriveModel.prueba" name="prueba" required #pruebaT="ngModel">
+              <mat-radio-button value="Pista">Pista</mat-radio-button>
+              <mat-radio-button value="Ciudad">Ciudad</mat-radio-button>
+            </mat-radio-group>
+            @if (pruebaT.invalid && (pruebaT.dirty || pruebaT.touched)) {
+              <div class="alert alert-danger">Por favor selecciona una opción</div>
+            }
+          </div>
+
+          
+          <div class="inp">
+            <label for="testDate" class="form-label">Fecha de la Prueba</label>
+            <input
+              type="date"
+              id="testDate"
+              name="testDate"
+              [(ngModel)]="testDriveModel.testDate"
+              [min]="minDate"
+              required
+              #testDateControl="ngModel"
+              class="form-control"
+            />
+            @if (testDateControl.invalid && (testDateControl.dirty || testDateControl.touched)) {
+              <div class="alert alert-danger">
+                @if (testDateControl.errors?.['required']) {
+                  <div>La fecha de prueba es requerida</div>
+                }
+                @if (testDateControl.errors?.['dateBeforeToday']) {
+                  <div>La fecha no puede ser anterior a hoy</div>
+                }
+              </div>
+            }
+          </div>
+
+      
+          <!-- Botón de Enviar 
+          <button type="submit" class="btn btn-primary" [disabled]="testDriveForm.invalid || testDriveModel.contact.length === 0">
+            Enviar
+          </button>
+          -->
+        </form>
+      
+</section> 

@@ -4,6 +4,7 @@ import { SeminuevosComponent } from './components/seminuevos/seminuevos.componen
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { ServiciosComponent } from './components/servicios/servicios.component';
 import { ContentComponent } from './components/content/content.component';
+import { FormularioComponent } from './components/formulario/formulario.component';
 
 
 export const routes: Routes = [
@@ -12,7 +13,8 @@ export const routes: Routes = [
     {path: 'nuevos', component:NuevosComponent},
     {path: 'seminuevos', component:SeminuevosComponent},
     {path: 'contacto', component:ContactoComponent},
-    {path: 'content', component:ContentComponent}
+    {path: 'content', component:ContentComponent},
+    {path: 'formulario', component:FormularioComponent}
 
 
 ];
