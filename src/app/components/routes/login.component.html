@@ -1,15 +1,10 @@
-<div id="container">
-    <h2>Login</h2>
-    <p>
-        <span>Username: </span>
-        <input class="form-control" [(ngModel)]="user.username" type="text">
-    </p>
-    <p>
-        <span>Password: </span>
-        <input class="form-control" [(ngModel)]="user.password" type="text">
-    </p>
+<form [formGroup]="formulario">
+    <label for="username">Usuario:</label>
+    <input type="text" id="username" formControlName="username">
 
-    <p>
-        <button type="button" class="btn btn-primary" (click)="this.login()">Continuar</button>
-    </p>
-</div>
+    <label for="password">Contraseña: </label>
+    <input type="password" id="password" formControlName="password">
+
+    <button type="submit" (click)="this.login()">Enviar</button>
+</form>
+
