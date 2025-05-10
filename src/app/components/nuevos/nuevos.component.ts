@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { ServicioNuevosAutosService } from './servicio-nuevos-autos.service';
+import { CurrencyPipe, DatePipe, UpperCasePipe } from '@angular/common';
 
 @Component({
   selector: 'app-nuevos',
-  imports: [],
+  imports: [CurrencyPipe, UpperCasePipe, DatePipe],
   templateUrl: './nuevos.component.html',
   styleUrl: './nuevos.component.css'
 })

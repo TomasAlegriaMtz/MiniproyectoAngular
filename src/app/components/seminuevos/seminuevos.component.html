@@ -1,37 +1,62 @@
 <body>
     @if (array.length > 0) {
-        <div class="container my-4">
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                @for (item of array; track item) {
-                    <div class="col">
-                        <div class="card h-100 shadow-sm">
-                            <img src="..." class="card-img-top" alt="Imagen del vehículo">
-                            <div class="card-body">
-                                <h5 class="card-title">{{ item.brand }} {{ item.model }} ({{ item.year }})</h5>
-                                <p class="card-text"><strong>Color:</strong> {{ item.color }}</p>
-                                <p class="card-text"><strong>Precio:</strong> ${{ item.price.toFixed(2) }}</p>
-                                <p class="card-text"><strong>Combustible:</strong> {{ item.fuel_type }}</p>
-                                <p class="card-text"><strong>Transmisión:</strong> {{ item.transmission }}</p>
-                                <p class="card-text"><strong>Kilometraje:</strong> {{ item.mileage }} km</p>
-                                <p class="card-text"><strong>Ubicación:</strong> {{ item.location }}</p>
-                                <p class="card-text">
-                                    <strong>Características:</strong>
-                                    <ul class="mb-0">
-                                        @for (feature of item.features; track feature) {
-                                            <li>{{ feature }}</li>
-                                        }
-                                    </ul>
-                                
-                            </div>
-                            <div class="card-footer text-end">
-                                <span class="badge bg-{{ item.available ? 'success' : 'danger' }}">
-                                    {{ item.available ? 'Disponible' : 'No disponible' }}
-                                </span>
-                            </div>
-                        </div>
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+
+            @for (item of array; track item) {
+            <div class="col">
+                <div class="card border-0 text-center shadow-sm h-100 overflow-hidden" style="border-radius: 8px;">
+                    <div class="position-relative d-flex justify-content-center align-items-center bg-light"
+                        style="height: 220px;">
+                        <img [src]="item.img" class="card-img-top p-3" alt="Imagen del vehículo"
+                            style="max-height: 180px; max-width: 100%; object-fit: contain;">
+
+                        <button class="btn btn-light position-absolute top-0 end-0 m-2 rounded-circle shadow-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24"
+                                height="24" stroke-width="2">
+                                <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
+                                <path
+                                    d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6">
+                                </path>
+                            </svg>
+                        </button>
+
                     </div>
-                }
+
+                    <div class="card-body px-4">
+                        <h6 class="text-muted text-uppercase small mb-2">JUAN STORE</h6>
+                        <h5 class="card-title">{{ item.brand | uppercase }} {{ item.model | uppercase }} ({{ item.year | date: 'yyyy' }})</h5>
+                        <p class="card-text" style="color: #2962FF;">{{ item.price.toFixed(2) | currency }}</p>
+                    </div>
+
+                    <div class="card-footer bg-white border-0 text-end">
+                        <span class="badge {{ item.available ? 'badge-available' : 'badge-unavailable' }}">
+                            {{ item.available ? 'Disponible' : 'No disponible' }}
+                        </span>
+                    </div>
+<!-- 
+            <div class="card-body px-4 details-hover">
+              <p class="card-text mb-1"><strong>Color:</strong> {{ item.color }}</p>
+              <p class="card-text mb-1"><strong>Combustible:</strong> {{ item.fuel_type }}</p>
+              <p class="card-text mb-1"><strong>Transmisión:</strong> {{ item.transmission }}</p>
+              <p class="card-text mb-1"><strong>Kilometraje:</strong> {{ item.mileage }} km</p>
+              <p class="card-text mb-1"><strong>Ubicación:</strong> {{ item.location }}</p>
+              <div class="text-start mt-2">
+                <strong>Características:</strong>
+                <ul class="mb-0">
+                  @for (feature of item.features; track feature) {
+                  <li>{{ feature }}</li>
+                  }
+                </ul>
+              </div>
+            </div> 
+-->
+
+                </div>
             </div>
+            }
         </div>
+    </div>
     }
 </body>

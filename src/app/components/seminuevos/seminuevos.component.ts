@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { ServicioAutosService } from './servicio-autos.service';
+import { CurrencyPipe, DatePipe, UpperCasePipe } from '@angular/common';
 
 @Component({
   selector: 'app-seminuevos',
-  imports: [],
+  imports: [CurrencyPipe, UpperCasePipe, DatePipe],
   templateUrl: './seminuevos.component.html',
   styleUrl: './seminuevos.component.css'
 })
