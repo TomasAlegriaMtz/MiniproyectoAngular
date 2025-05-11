@@ -1,1 +1,5 @@
-<p>buscador works!</p>
+<div class="buscador">
+    <input type="text" [(ngModel)]="consulta" placeholder="Buscar auto por marca, modelo, año, etc."
+        class="input-busqueda" />
+    <button (click)="emitSignal()">Buscar</button>
+</div>

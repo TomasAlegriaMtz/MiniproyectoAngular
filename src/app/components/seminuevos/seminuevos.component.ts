@@ -11,6 +11,7 @@ import { BuscadorComponent } from '../buscador/buscador.component';
 })
 export class SeminuevosComponent {
   array: any = []; //este sera modificado en el componente hijo que sera el buscador
+  arrayCopy: any = [];
   flag: boolean = false;
 
   //Inyectamos el servicio en este componente
@@ -29,7 +30,7 @@ export class SeminuevosComponent {
 
   successRequest(data: any): void {
     //console.log(data);
-    this.array = data.cars;
+    this.arrayCopy = this.array = data.cars;
     //console.log(this.array);
     this.flag = true;
   }

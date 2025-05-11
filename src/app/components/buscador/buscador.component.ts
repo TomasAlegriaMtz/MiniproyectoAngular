@@ -1,8 +1,9 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-buscador',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './buscador.component.html',
   styleUrl: './buscador.component.css'
 })
@@ -22,7 +23,29 @@ export class BuscadorComponent {
   }
 
   emitSignal(): void {
-    //enviaremos donde se almacena los datos modificados
+    const query = this.consulta?.toString().toLowerCase() || "";
+  
+    this.arrayCarsCopy = this.arrayCars.filter((car: any) => {
+      if (!car) return false; // Asegura que el elemento exista
+      console.log(car);
+
+      return (
+        car.id?.toString() === query ||
+        car.brand?.toLowerCase().includes(query) ||
+        car.model?.toLowerCase().includes(query) ||
+        car.year?.toString() === query ||
+        car.color?.toLowerCase().includes(query) ||
+        car.price?.toString().includes(query) ||
+        car.fuel_type?.toLowerCase().includes(query) ||
+        car.transmission?.toLowerCase().includes(query) ||
+        car.mileage?.toString().includes(query) ||
+        (query === "disponible" && car.available) ||
+        (query === "no disponible" && !car.available) ||
+        (Array.isArray(car.features) && car.features.some((feature: any) => feature.toLowerCase().includes(query))) ||
+        car.location?.toLowerCase().includes(query)
+      );
+    });
+
     this.arrayChanged.emit(this.arrayCarsCopy);
   }
 }

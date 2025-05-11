@@ -12,6 +12,7 @@ import { BuscadorComponent } from '../buscador/buscador.component';
 export class NuevosComponent {
   //declaramos un array donde se almacenara el JSON
   array: any = []; //este sera modificado en el componente hijo que sera el buscador
+  arrayCopy: any = [];
   flag: boolean = false;
 
   //Inyectamos el servicio en este componente
@@ -31,8 +32,9 @@ export class NuevosComponent {
 
   successRequest(data: any): void {
     //console.log(data);
-    this.array = data.cars;
+    this.arrayCopy = this.array = data.cars;
     //console.log(this.array);
     this.flag = true;
+    this.arrayCopy = this.array;
   }
 }

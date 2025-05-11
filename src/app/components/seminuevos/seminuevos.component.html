@@ -1,6 +1,6 @@
 <div class="body_seminuevos">
     @if (this.flag) {
-    <app-buscador [arrayCars]="this.array" (arrayChanged)="arrayModified($event)"></app-buscador>
+        <app-buscador [arrayCars]="this.arrayCopy" (arrayChanged)="arrayModified($event)"></app-buscador>
     }
 
     @if (array.length > 0) {
