@@ -1,3 +1,4 @@
+
 .video-bg {
     position: relative;
     width: 100%;
@@ -116,4 +117,5 @@ form{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
 }

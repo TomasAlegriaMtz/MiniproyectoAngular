@@ -1,0 +1,1011 @@
+{
+  "cars": [
+    {
+      "id": 1,
+      "brand": "Hyundai",
+      "model": "Elantra",
+      "year": 2024,
+      "color": "Gris",
+      "price": 33975.42,
+      "fuel_type": "Gasolina",
+      "transmission": "Manual",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "GPS",
+        "Bluetooth",
+        "Sunroof"
+      ],
+      "location": "Guadalajara",
+      "img": "https://img.remediosdigitales.com/8f3789/hyundai-elantra-2020-/1366_2000.jpg"
+    },
+    {
+      "id": 2,
+      "brand": "Chevrolet",
+      "model": "Aveo",
+      "year": 2024,
+      "color": "Verde",
+      "price": 60283.48,
+      "fuel_type": "Gasolina",
+      "transmission": "Manual",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "Cámara trasera",
+        "Sunroof",
+        "Aire acondicionado"
+      ],
+      "location": "Guadalajara",
+      "img": "https://www.autoasesor.com/chevrolet/imagenes/aveosedan2024.png"
+
+    },
+    {
+      "id": 3,
+      "brand": "Toyota",
+      "model": "Corolla",
+      "year": 2024,
+      "color": "Azul",
+      "price": 71616.67,
+      "fuel_type": "Eléctrico",
+      "transmission": "Manual",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "Cámara trasera",
+        "Aire acondicionado",
+        "GPS",
+        "Asientos calefactables"
+      ],
+      "location": "Tijuana",
+      "img": "https://www.buyatoyota.com/sharpr/bat/assets/img/vehicle-compare/2023/corolla_compare_hero.png"
+    },
+    {
+      "id": 4,
+      "brand": "Ford",
+      "model": "Focus",
+      "year": 2024,
+      "color": "Plata",
+      "price": 81946.06,
+      "fuel_type": "Gasolina",
+      "transmission": "Manual",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "Bluetooth",
+        "Sunroof",
+        "Asientos calefactables",
+        "Cámara trasera"
+      ],
+      "location": "Monterrey",
+      "img": "https://fotos.perfil.com/2021/10/15/trim/876/492/ford-focus-2022-1246537.jpg"
+    },
+    {
+      "id": 5,
+      "brand": "BMW",
+      "model": "X5",
+      "year": 2024,
+      "color": "Gris",
+      "price": 63332.78,
+      "fuel_type": "Diesel",
+      "transmission": "Manual",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "Aire acondicionado",
+        "GPS",
+        "Bluetooth",
+        "Sunroof"
+      ],
+      "location": "Guadalajara",
+      "img": "https://cdn.autobild.es/sites/navi.axelspringer.es/public/bdc/dc/fotos/BMW_X5_2023.jpg?tf=3840x"
+    },
+    {
+      "id": 6,
+      "brand": "BMW",
+      "model": "X5",
+      "year": 2024,
+      "color": "Verde",
+      "price": 59689.55,
+      "fuel_type": "Gasolina",
+      "transmission": "Manual",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "Sunroof",
+        "Bluetooth",
+        "Aire acondicionado",
+        "Asientos calefactables",
+        "Cámara trasera"
+      ],
+      "location": "Guadalajara",
+      "img": "https://cdn.autobild.es/sites/navi.axelspringer.es/public/bdc/dc/fotos/BMW_X5_2023.jpg?tf=3840x"
+    },
+    {
+      "id": 7,
+      "brand": "Nissan",
+      "model": "Sentra",
+      "year": 2024,
+      "color": "Negro",
+      "price": 36366.53,
+      "fuel_type": "Híbrido",
+      "transmission": "CVT",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "Sunroof",
+        "Asientos calefactables",
+        "GPS",
+        "Aire acondicionado",
+        "Cámara trasera"
+      ],
+      "location": "Tijuana",
+      "img": "https://www.nissansanje.com.mx/static/agency-go-virtual/Nissan/Accesorios_Nissan/Sentra/nissan-sentra-accesorios.jpg"
+    },
+    {
+      "id": 8,
+      "brand": "Ford",
+      "model": "Focus",
+      "year": 2024,
+      "color": "Azul",
+      "price": 62290.23,
+      "fuel_type": "Gasolina",
+      "transmission": "CVT",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "Cámara trasera",
+        "Aire acondicionado",
+        "Sunroof",
+        "GPS",
+        "Asientos calefactables"
+      ],
+      "location": "Puebla",
+      "img": "https://fotos.perfil.com/2021/10/15/trim/876/492/ford-focus-2022-1246537.jpg"
+    },
+    {
+      "id": 9,
+      "brand": "Mazda",
+      "model": "Mazda3",
+      "year": 2024,
+      "color": "Gris",
+      "price": 33819.06,
+      "fuel_type": "Híbrido",
+      "transmission": "Automática",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "Aire acondicionado",
+        "Bluetooth",
+        "Asientos calefactables",
+        "Sunroof",
+        "Cámara trasera"
+      ],
+      "location": "Ciudad de México",
+      "img": "https://alden.mx/wp-content/uploads/2023/06/mazda3-sedan-galeria-v1-01-scaled.jpg"
+
+    },
+    {
+      "id": 10,
+      "brand": "Nissan",
+      "model": "Sentra",
+      "year": 2024,
+      "color": "Gris",
+      "price": 71924.09,
+      "fuel_type": "Eléctrico",
+      "transmission": "CVT",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "Asientos calefactables",
+        "Aire acondicionado",
+        "Cámara trasera",
+        "Sunroof"
+      ],
+      "location": "Tijuana",
+      "img": "https://www.nissansanje.com.mx/static/agency-go-virtual/Nissan/Accesorios_Nissan/Sentra/nissan-sentra-accesorios.jpg"
+    },
+    {
+      "id": 11,
+      "brand": "Chevrolet",
+      "model": "Aveo",
+      "year": 2024,
+      "color": "Azul",
+      "price": 55806.88,
+      "fuel_type": "Diesel",
+      "transmission": "Automática",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "Sunroof",
+        "Asientos calefactables",
+        "Cámara trasera",
+        "Aire acondicionado"
+      ],
+      "location": "Mérida",
+      "img": "https://www.autoasesor.com/chevrolet/imagenes/aveosedan2024.png"
+    },
+    {
+      "id": 12,
+      "brand": "Mazda",
+      "model": "Mazda3",
+      "year": 2024,
+      "color": "Plata",
+      "price": 47323.62,
+      "fuel_type": "Eléctrico",
+      "transmission": "Manual",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "Cámara trasera",
+        "Aire acondicionado",
+        "Sunroof"
+      ],
+      "location": "Puebla",
+      "img": "https://alden.mx/wp-content/uploads/2023/06/mazda3-sedan-galeria-v1-01-scaled.jpg"
+    },
+    {
+      "id": 13,
+      "brand": "Ford",
+      "model": "Focus",
+      "year": 2024,
+      "color": "Gris",
+      "price": 41970.49,
+      "fuel_type": "Híbrido",
+      "transmission": "Manual",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "GPS",
+        "Bluetooth",
+        "Cámara trasera"
+      ],
+      "location": "Querétaro",
+      "img": "https://fotos.perfil.com/2021/10/15/trim/876/492/ford-focus-2022-1246537.jpg"
+    },
+    {
+      "id": 14,
+      "brand": "Ford",
+      "model": "Focus",
+      "year": 2024,
+      "color": "Blanco",
+      "price": 41721.42,
+      "fuel_type": "Diesel",
+      "transmission": "Manual",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "Bluetooth",
+        "Sunroof",
+        "GPS",
+        "Aire acondicionado"
+      ],
+      "location": "Ciudad de México",
+      "img": "https://fotos.perfil.com/2021/10/15/trim/876/492/ford-focus-2022-1246537.jpg"
+    },
+    {
+      "id": 15,
+      "brand": "Chevrolet",
+      "model": "Aveo",
+      "year": 2024,
+      "color": "Blanco",
+      "price": 68007.66,
+      "fuel_type": "Híbrido",
+      "transmission": "CVT",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "Asientos calefactables",
+        "Cámara trasera",
+        "GPS"
+      ],
+      "location": "Guadalajara",
+      "img": "https://www.autoasesor.com/chevrolet/imagenes/aveosedan2024.png"
+    },
+    {
+      "id": 16,
+      "brand": "Kia",
+      "model": "Rio",
+      "year": 2024,
+      "color": "Rojo",
+      "price": 46044.06,
+      "fuel_type": "Gasolina",
+      "transmission": "Automática",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "Bluetooth",
+        "GPS",
+        "Cámara trasera",
+        "Aire acondicionado"
+      ],
+      "location": "Querétaro",
+      "img": "https://cdn.autobild.es/sites/navi.axelspringer.es/public/media/image/2019/08/comparativa-ford-fiesta-active-hyundai-kona-vw-t-cross_3.jpg?tf=3840x"
+
+    },
+    {
+      "id": 17,
+      "brand": "Kia",
+      "model": "Rio",
+      "year": 2024,
+      "color": "Plata",
+      "price": 55912.37,
+      "fuel_type": "Gasolina",
+      "transmission": "Automática",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "Sunroof",
+        "Asientos calefactables",
+        "Cámara trasera",
+        "GPS"
+      ],
+      "location": "Querétaro",
+      "img": "https://cdn.autobild.es/sites/navi.axelspringer.es/public/media/image/2019/08/comparativa-ford-fiesta-active-hyundai-kona-vw-t-cross_3.jpg?tf=3840x"
+    },
+    {
+      "id": 18,
+      "brand": "Honda",
+      "model": "Civic",
+      "year": 2024,
+      "color": "Rojo",
+      "price": 74112.71,
+      "fuel_type": "Gasolina",
+      "transmission": "Automática",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "Bluetooth",
+        "Aire acondicionado",
+        "Asientos calefactables",
+        "GPS",
+        "Sunroof"
+      ],
+      "location": "Monterrey",
+      "img": "https://www.hondaframework.com/resourcefiles/new-car-model-snippet-images/apariencia-civic-2025.jpg"
+    },
+    {
+      "id": 19,
+      "brand": "BMW",
+      "model": "X5",
+      "year": 2024,
+      "color": "Gris",
+      "price": 41977.6,
+      "fuel_type": "Gasolina",
+      "transmission": "CVT",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "Sunroof",
+        "Bluetooth",
+        "Cámara trasera",
+        "Asientos calefactables",
+        "GPS"
+      ],
+      "location": "Querétaro",
+      "img": "https://cdn.autobild.es/sites/navi.axelspringer.es/public/bdc/dc/fotos/BMW_X5_2023.jpg?tf=3840x"
+    },
+    {
+      "id": 20,
+      "brand": "Honda",
+      "model": "Civic",
+      "year": 2024,
+      "color": "Verde",
+      "price": 42647.17,
+      "fuel_type": "Híbrido",
+      "transmission": "CVT",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "GPS",
+        "Aire acondicionado",
+        "Cámara trasera"
+      ],
+      "location": "Mérida",
+      "img": "https://www.hondaframework.com/resourcefiles/new-car-model-snippet-images/apariencia-civic-2025.jpg"
+    },
+    {
+      "id": 21,
+      "brand": "Hyundai",
+      "model": "Elantra",
+      "year": 2024,
+      "color": "Gris",
+      "price": 61766.75,
+      "fuel_type": "Diesel",
+      "transmission": "Automática",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "Bluetooth",
+        "Sunroof",
+        "GPS",
+        "Aire acondicionado",
+        "Asientos calefactables"
+      ],
+      "location": "Guadalajara",
+      "img": "https://img.remediosdigitales.com/8f3789/hyundai-elantra-2020-/1366_2000.jpg"
+    },
+    {
+      "id": 22,
+      "brand": "Chevrolet",
+      "model": "Aveo",
+      "year": 2024,
+      "color": "Gris",
+      "price": 42308.37,
+      "fuel_type": "Eléctrico",
+      "transmission": "CVT",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "GPS",
+        "Bluetooth",
+        "Asientos calefactables"
+      ],
+      "location": "León",
+      "img": "https://www.autoasesor.com/chevrolet/imagenes/aveosedan2024.png"
+    },
+    {
+      "id": 23,
+      "brand": "Ford",
+      "model": "Focus",
+      "year": 2024,
+      "color": "Negro",
+      "price": 41775.41,
+      "fuel_type": "Híbrido",
+      "transmission": "Manual",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "Bluetooth",
+        "Cámara trasera",
+        "Asientos calefactables"
+      ],
+      "location": "Guadalajara",
+      "img": "https://fotos.perfil.com/2021/10/15/trim/876/492/ford-focus-2022-1246537.jpg"
+    },
+    {
+      "id": 24,
+      "brand": "Kia",
+      "model": "Rio",
+      "year": 2024,
+      "color": "Plata",
+      "price": 26433.6,
+      "fuel_type": "Eléctrico",
+      "transmission": "CVT",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "Aire acondicionado",
+        "GPS",
+        "Bluetooth",
+        "Cámara trasera"
+      ],
+      "location": "Monterrey",
+      "img": "https://cdn.autobild.es/sites/navi.axelspringer.es/public/media/image/2019/08/comparativa-ford-fiesta-active-hyundai-kona-vw-t-cross_3.jpg?tf=3840x"
+    },
+    {
+      "id": 25,
+      "brand": "BMW",
+      "model": "X5",
+      "year": 2024,
+      "color": "Rojo",
+      "price": 23429.61,
+      "fuel_type": "Híbrido",
+      "transmission": "CVT",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "Aire acondicionado",
+        "Cámara trasera",
+        "Sunroof",
+        "GPS"
+      ],
+      "location": "Mérida",
+      "img": "https://cdn.autobild.es/sites/navi.axelspringer.es/public/bdc/dc/fotos/BMW_X5_2023.jpg?tf=3840x"
+    },
+    {
+      "id": 26,
+      "brand": "Nissan",
+      "model": "Sentra",
+      "year": 2024,
+      "color": "Negro",
+      "price": 23394.81,
+      "fuel_type": "Híbrido",
+      "transmission": "CVT",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "GPS",
+        "Asientos calefactables",
+        "Bluetooth"
+      ],
+      "location": "Tijuana",
+      "img": "https://www.nissansanje.com.mx/static/agency-go-virtual/Nissan/Accesorios_Nissan/Sentra/nissan-sentra-accesorios.jpg"
+    },
+    {
+      "id": 27,
+      "brand": "Toyota",
+      "model": "Corolla",
+      "year": 2024,
+      "color": "Azul",
+      "price": 66293.02,
+      "fuel_type": "Eléctrico",
+      "transmission": "CVT",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "Cámara trasera",
+        "Bluetooth",
+        "Asientos calefactables",
+        "Aire acondicionado",
+        "Sunroof"
+      ],
+      "location": "Querétaro",
+      "img": "https://www.buyatoyota.com/sharpr/bat/assets/img/vehicle-compare/2023/corolla_compare_hero.png"
+    },
+    {
+      "id": 28,
+      "brand": "Volkswagen",
+      "model": "Jetta",
+      "year": 2024,
+      "color": "Azul",
+      "price": 60160.94,
+      "fuel_type": "Gasolina",
+      "transmission": "CVT",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "Cámara trasera",
+        "Bluetooth",
+        "GPS",
+        "Asientos calefactables"
+      ],
+      "location": "Tijuana",
+      "img": "https://http2.mlstatic.com/D_NQ_718999-MLA79817237034_102024-OO.jpg"
+    },
+    {
+      "id": 29,
+      "brand": "BMW",
+      "model": "X5",
+      "year": 2024,
+      "color": "Gris",
+      "price": 67995.72,
+      "fuel_type": "Diesel",
+      "transmission": "Automática",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "Bluetooth",
+        "Cámara trasera",
+        "Asientos calefactables",
+        "GPS",
+        "Aire acondicionado"
+      ],
+      "location": "Querétaro",
+      "img": "https://cdn.autobild.es/sites/navi.axelspringer.es/public/bdc/dc/fotos/BMW_X5_2023.jpg?tf=3840x"
+    },
+    {
+      "id": 30,
+      "brand": "BMW",
+      "model": "X5",
+      "year": 2024,
+      "color": "Rojo",
+      "price": 38953.17,
+      "fuel_type": "Diesel",
+      "transmission": "CVT",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "Asientos calefactables",
+        "Bluetooth",
+        "Aire acondicionado",
+        "Sunroof"
+      ],
+      "location": "Mérida",
+      "img": "https://cdn.autobild.es/sites/navi.axelspringer.es/public/bdc/dc/fotos/BMW_X5_2023.jpg?tf=3840x"
+    },
+    {
+      "id": 31,
+      "brand": "Nissan",
+      "model": "Sentra",
+      "year": 2024,
+      "color": "Plata",
+      "price": 74638.37,
+      "fuel_type": "Eléctrico",
+      "transmission": "CVT",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "Cámara trasera",
+        "Bluetooth",
+        "Asientos calefactables"
+      ],
+      "location": "León",
+      "img": "https://www.nissansanje.com.mx/static/agency-go-virtual/Nissan/Accesorios_Nissan/Sentra/nissan-sentra-accesorios.jpg"
+    },
+    {
+      "id": 32,
+      "brand": "Kia",
+      "model": "Rio",
+      "year": 2024,
+      "color": "Verde",
+      "price": 54382.95,
+      "fuel_type": "Híbrido",
+      "transmission": "Manual",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "Aire acondicionado",
+        "Bluetooth",
+        "Sunroof",
+        "GPS",
+        "Cámara trasera"
+      ],
+      "location": "Mérida",
+      "img": "https://cdn.autobild.es/sites/navi.axelspringer.es/public/media/image/2019/08/comparativa-ford-fiesta-active-hyundai-kona-vw-t-cross_3.jpg?tf=3840x"
+    },
+    {
+      "id": 33,
+      "brand": "Kia",
+      "model": "Rio",
+      "year": 2024,
+      "color": "Gris",
+      "price": 50164.33,
+      "fuel_type": "Gasolina",
+      "transmission": "Automática",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "Aire acondicionado",
+        "Sunroof",
+        "Cámara trasera",
+        "GPS",
+        "Asientos calefactables"
+      ],
+      "location": "Guadalajara",
+      "img": "https://cdn.autobild.es/sites/navi.axelspringer.es/public/media/image/2019/08/comparativa-ford-fiesta-active-hyundai-kona-vw-t-cross_3.jpg?tf=3840x"
+    },
+    {
+      "id": 34,
+      "brand": "Chevrolet",
+      "model": "Aveo",
+      "year": 2024,
+      "color": "Negro",
+      "price": 50890.08,
+      "fuel_type": "Híbrido",
+      "transmission": "CVT",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "Aire acondicionado",
+        "Bluetooth",
+        "Asientos calefactables",
+        "Sunroof",
+        "Cámara trasera"
+      ],
+      "location": "Monterrey",
+      "img": "https://www.autoasesor.com/chevrolet/imagenes/aveosedan2024.png"
+    },
+    {
+      "id": 35,
+      "brand": "Hyundai",
+      "model": "Elantra",
+      "year": 2024,
+      "color": "Gris",
+      "price": 47380.33,
+      "fuel_type": "Gasolina",
+      "transmission": "Manual",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "Aire acondicionado",
+        "Asientos calefactables",
+        "Sunroof",
+        "Bluetooth",
+        "GPS"
+      ],
+      "location": "Tijuana",
+      "img": "https://img.remediosdigitales.com/8f3789/hyundai-elantra-2020-/1366_2000.jpg"
+    },
+    {
+      "id": 36,
+      "brand": "Kia",
+      "model": "Rio",
+      "year": 2024,
+      "color": "Gris",
+      "price": 49770.89,
+      "fuel_type": "Gasolina",
+      "transmission": "Automática",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "Aire acondicionado",
+        "Cámara trasera",
+        "GPS",
+        "Asientos calefactables",
+        "Sunroof"
+      ],
+      "location": "Tijuana",
+      "img": "https://cdn.autobild.es/sites/navi.axelspringer.es/public/media/image/2019/08/comparativa-ford-fiesta-active-hyundai-kona-vw-t-cross_3.jpg?tf=3840x"
+    },
+    {
+      "id": 37,
+      "brand": "Chevrolet",
+      "model": "Aveo",
+      "year": 2024,
+      "color": "Blanco",
+      "price": 49337.91,
+      "fuel_type": "Diesel",
+      "transmission": "Automática",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "Sunroof",
+        "Cámara trasera",
+        "Aire acondicionado",
+        "Asientos calefactables"
+      ],
+      "location": "Ciudad de México",
+      "img": "https://www.autoasesor.com/chevrolet/imagenes/aveosedan2024.png"
+    },
+    {
+      "id": 38,
+      "brand": "BMW",
+      "model": "X5",
+      "year": 2024,
+      "color": "Azul",
+      "price": 19472.52,
+      "fuel_type": "Diesel",
+      "transmission": "Manual",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "Asientos calefactables",
+        "Bluetooth",
+        "GPS",
+        "Cámara trasera",
+        "Aire acondicionado"
+      ],
+      "location": "Ciudad de México",
+      "img": "https://cdn.autobild.es/sites/navi.axelspringer.es/public/bdc/dc/fotos/BMW_X5_2023.jpg?tf=3840x"
+    },
+    {
+      "id": 39,
+      "brand": "Toyota",
+      "model": "Corolla",
+      "year": 2024,
+      "color": "Gris",
+      "price": 50960.92,
+      "fuel_type": "Híbrido",
+      "transmission": "CVT",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "Bluetooth",
+        "GPS",
+        "Cámara trasera",
+        "Asientos calefactables",
+        "Aire acondicionado"
+      ],
+      "location": "Tijuana",
+      "img": "https://www.buyatoyota.com/sharpr/bat/assets/img/vehicle-compare/2023/corolla_compare_hero.png"
+    },
+    {
+      "id": 40,
+      "brand": "Kia",
+      "model": "Rio",
+      "year": 2024,
+      "color": "Rojo",
+      "price": 79451.02,
+      "fuel_type": "Diesel",
+      "transmission": "Automática",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "Cámara trasera",
+        "Asientos calefactables",
+        "Aire acondicionado"
+      ],
+      "location": "Puebla",
+      "img": "https://cdn.autobild.es/sites/navi.axelspringer.es/public/media/image/2019/08/comparativa-ford-fiesta-active-hyundai-kona-vw-t-cross_3.jpg?tf=3840x"
+    },
+    {
+      "id": 41,
+      "brand": "Ford",
+      "model": "Focus",
+      "year": 2024,
+      "color": "Blanco",
+      "price": 62791.31,
+      "fuel_type": "Híbrido",
+      "transmission": "Automática",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "Aire acondicionado",
+        "Bluetooth",
+        "Cámara trasera",
+        "Asientos calefactables",
+        "Sunroof"
+      ],
+      "location": "León",
+      "img": "https://fotos.perfil.com/2021/10/15/trim/876/492/ford-focus-2022-1246537.jpg"
+    },
+    {
+      "id": 42,
+      "brand": "Hyundai",
+      "model": "Elantra",
+      "year": 2024,
+      "color": "Rojo",
+      "price": 38546.86,
+      "fuel_type": "Eléctrico",
+      "transmission": "CVT",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "Bluetooth",
+        "Cámara trasera",
+        "Sunroof",
+        "Asientos calefactables",
+        "Aire acondicionado"
+      ],
+      "location": "Guadalajara",
+      "img": "https://img.remediosdigitales.com/8f3789/hyundai-elantra-2020-/1366_2000.jpg"
+    },
+    {
+      "id": 43,
+      "brand": "Kia",
+      "model": "Rio",
+      "year": 2024,
+      "color": "Blanco",
+      "price": 72494.16,
+      "fuel_type": "Eléctrico",
+      "transmission": "Automática",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "Bluetooth",
+        "Aire acondicionado",
+        "Sunroof",
+        "Cámara trasera"
+      ],
+      "location": "Mérida",
+      "img": "https://cdn.autobild.es/sites/navi.axelspringer.es/public/media/image/2019/08/comparativa-ford-fiesta-active-hyundai-kona-vw-t-cross_3.jpg?tf=3840x"
+    },
+    {
+      "id": 44,
+      "brand": "BMW",
+      "model": "X5",
+      "year": 2024,
+      "color": "Verde",
+      "price": 68646.58,
+      "fuel_type": "Diesel",
+      "transmission": "CVT",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "GPS",
+        "Asientos calefactables",
+        "Sunroof"
+      ],
+      "location": "Puebla",
+      "img": "https://cdn.autobild.es/sites/navi.axelspringer.es/public/bdc/dc/fotos/BMW_X5_2023.jpg?tf=3840x"
+    },
+    {
+      "id": 45,
+      "brand": "Kia",
+      "model": "Rio",
+      "year": 2024,
+      "color": "Plata",
+      "price": 67779.89,
+      "fuel_type": "Híbrido",
+      "transmission": "CVT",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "Sunroof",
+        "GPS",
+        "Asientos calefactables"
+      ],
+      "location": "Mérida",
+      "img": "https://cdn.autobild.es/sites/navi.axelspringer.es/public/media/image/2019/08/comparativa-ford-fiesta-active-hyundai-kona-vw-t-cross_3.jpg?tf=3840x"
+    },
+    {
+      "id": 46,
+      "brand": "Toyota",
+      "model": "Corolla",
+      "year": 2024,
+      "color": "Verde",
+      "price": 56821.23,
+      "fuel_type": "Eléctrico",
+      "transmission": "Manual",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "Cámara trasera",
+        "Aire acondicionado",
+        "Sunroof",
+        "Asientos calefactables",
+        "Bluetooth"
+      ],
+      "location": "Guadalajara",
+      "img": "https://www.buyatoyota.com/sharpr/bat/assets/img/vehicle-compare/2023/corolla_compare_hero.png"
+    },
+    {
+      "id": 47,
+      "brand": "Toyota",
+      "model": "Corolla",
+      "year": 2024,
+      "color": "Azul",
+      "price": 57063.6,
+      "fuel_type": "Híbrido",
+      "transmission": "CVT",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "Bluetooth",
+        "Sunroof",
+        "Asientos calefactables",
+        "Aire acondicionado"
+      ],
+      "location": "Puebla",
+      "img": "https://www.buyatoyota.com/sharpr/bat/assets/img/vehicle-compare/2023/corolla_compare_hero.png"
+    },
+    {
+      "id": 48,
+      "brand": "Honda",
+      "model": "Civic",
+      "year": 2024,
+      "color": "Gris",
+      "price": 61589.79,
+      "fuel_type": "Eléctrico",
+      "transmission": "Manual",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "Bluetooth",
+        "Aire acondicionado",
+        "Cámara trasera"
+      ],
+      "location": "Puebla",
+      "img": "https://www.hondaframework.com/resourcefiles/new-car-model-snippet-images/apariencia-civic-2025.jpg"
+    },
+    {
+      "id": 49,
+      "brand": "Mazda",
+      "model": "Mazda3",
+      "year": 2024,
+      "color": "Rojo",
+      "price": 45051.04,
+      "fuel_type": "Gasolina",
+      "transmission": "Automática",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "Aire acondicionado",
+        "Cámara trasera",
+        "Bluetooth",
+        "Asientos calefactables"
+      ],
+      "location": "León",
+      "img": "https://alden.mx/wp-content/uploads/2023/06/mazda3-sedan-galeria-v1-01-scaled.jpg"
+    },
+    {
+      "id": 50,
+      "brand": "Nissan",
+      "model": "Sentra",
+      "year": 2024,
+      "color": "Verde",
+      "price": 64263.69,
+      "fuel_type": "Diesel",
+      "transmission": "CVT",
+      "mileage": 0,
+      "available": true,
+      "features": [
+        "Asientos calefactables",
+        "Sunroof",
+        "GPS"
+      ],
+      "location": "León",
+      "img": "https://www.nissansanje.com.mx/static/agency-go-virtual/Nissan/Accesorios_Nissan/Sentra/nissan-sentra-accesorios.jpg"
+    }
+  ]
+}
