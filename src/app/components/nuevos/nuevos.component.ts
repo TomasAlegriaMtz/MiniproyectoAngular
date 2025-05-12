@@ -3,6 +3,7 @@ import { ServicioNuevosAutosService } from './servicio-nuevos-autos.service';
 
 @Component({
   selector: 'app-nuevos',
+  standalone:true,
   imports: [],
   templateUrl: './nuevos.component.html',
   styleUrl: './nuevos.component.css'

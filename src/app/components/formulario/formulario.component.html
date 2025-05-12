@@ -10,7 +10,7 @@
   </div>
 
   
-        <form #testDriveForm="ngForm" (ngSubmit)="onTestDriveSubmit()">
+        <form #testDriveForm="ngForm" (ngSubmit)="onTestDriveSubmit(testDriveForm)">
           <!-- Modelo del Auto -->
           <div class="inp">
             <label for="model" class="form-label">Modelo del Auto</label>
@@ -28,7 +28,7 @@
               }
             </select>
             @if (modelControl.invalid && (modelControl.dirty || modelControl.touched)) {
-              <div class="alert alert-danger">
+              <div class="alert alert-danger error-message">
                 El modelo es requerido
               </div>
             }
@@ -47,10 +47,10 @@
             
             @if (emailT.invalid && (emailT.dirty || emailT.touched)) {
               @if (emailT.errors?.['required']) {
-                <div class="alert alert-danger">Campo requerido</div>
+                <div class="alert alert-danger error-message">Campo requerido</div>
               }
               @if (emailT.errors?.['email']) {
-                <div class="alert alert-danger">Email no válido</div>
+                <div class="alert alert-danger error-message">Email no válido</div>
               }
             }
           </div>
@@ -65,7 +65,7 @@
               <mat-radio-button value="Ciudad">Ciudad</mat-radio-button>
             </mat-radio-group>
             @if (pruebaT.invalid && (pruebaT.dirty || pruebaT.touched)) {
-              <div class="alert alert-danger">Por favor selecciona una opción</div>
+              <div class="alert alert-danger error-message">Por favor selecciona una opción</div>
             }
           </div>
 
@@ -83,7 +83,7 @@
               class="form-control"
             />
             @if (testDateControl.invalid && (testDateControl.dirty || testDateControl.touched)) {
-              <div class="alert alert-danger">
+              <div class="alert alert-danger error-message">
                 @if (testDateControl.errors?.['required']) {
                   <div>La fecha de prueba es requerida</div>
                 }
@@ -95,11 +95,13 @@
           </div>
 
       
-          <!-- Botón de Enviar 
-          <button type="submit" class="btn btn-primary" [disabled]="testDriveForm.invalid || testDriveModel.contact.length === 0">
+          
+          <button type="submit" class="btn btn-primary" [disabled]="testDriveForm.invalid">
             Enviar
           </button>
-          -->
+          
         </form>
       
 </section> 
+
+<!--Formulario Reactivo-->

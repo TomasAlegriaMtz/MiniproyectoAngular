@@ -1,11 +1,16 @@
 import { Component } from '@angular/core';
-import { LoginComponent } from '../routes/login.component';
+import { FooterComponent } from '../footer/footer.component';
+import { HeaderComponent } from '../header/header.component';
+import { NavbarComponent } from '../navbar/navbar.component';
+import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-content',
-  imports: [LoginComponent],
+  standalone:true,
+  imports: [RouterOutlet, CommonModule, FooterComponent, NavbarComponent],
   templateUrl: './content.component.html',
-  styleUrl: './content.component.css'
+styleUrls: ['./content.component.css']
 })
 export class ContentComponent {
 

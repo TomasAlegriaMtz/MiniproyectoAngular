@@ -1,1 +1,73 @@
-<p>servicios works!</p>
+<h1>Conoce Nuestros Servicios</h1>
+<form class="form" [formGroup]="form" (ngSubmit) = "validar()" >
+    <p class="form-title">Servicios</p>
+    <div class="input-container">
+        <label>Nombre Completo</label>
+        <input type="text" placeholder="Nombre" formControlName="nombre">
+        @if(form.get('nombre')?.hasError('required') && form.get('nombre')?.touched){
+            <div class="alert alert-danger error-message">El nombre es obligatorio</div>
+        }
+        @if(form.get('nombre')?.hasError('pattern') && form.get('nombre')?.touched){
+            <div class="alert alert-danger error-message">El nombre no es valido</div>   
+        }
+    </div>
+    <div class="input-container">
+        <label>Número de Telefono</label>
+        <input type="number" formControlName="number">
+        @if(form.get('number')?.hasError('required')&&form.get('number')?.touched){
+            <div class="alert alert-danger error-message">El numero es obligatorio</div>
+        }
+        @if(form.get('number')?.hasError('pattern')&&form.get('number')?.touched){
+            <div class="alert alert-danger error-message">El numero no es valido</div>
+        }
+        @if(form.get('number')?.hasError('minlength') || form.get('number')?.hasError('maxlength') && form.get('number')?.touched){
+            <div class="alert alert-danger error-message">El numero debe tener 10 digitos</div>
+        }
+    </div>
+    <div class="input-container">
+        <label for="">Modelo del vehiculo</label>
+        <input type="text" formControlName="model">
+        @if(form.get('model')?.hasError('required') && form.get('model')?.touched){
+            <div class="alert alert-danger error-message">El model es requerido</div>
+        }
+         @if(form.get('model')?.hasError('pattern') && form.get('model')?.touched){
+            <div class="alert alert-danger error-message">El modelo es invalido</div>   
+        }
+    </div>
+    <div class="input-container">
+        <label for="">Año del vehiculo</label>
+        <input type="number" formControlName="year">
+        @if(form.get('year')?.hasError('required') && form.get('year')?.touched){
+            <div class="alert alert-danger error-message">El año del vehiculo es requerido</div>
+        }
+        @if(form.get('year')?.hasError('min') && form.get('year')?.touched){
+            <div class="alert alert-danger error-message">El año del vehiculo no tiene que ser menor a 1980</div>
+        }
+        @if(form.get('year')?.hasError('max') && form.get('year')?.touched){
+            <div class="alert alert-danger error-message">El año del vehiculo no tiene que ser mayor a 2025</div>
+        }
+        @if(form.get('year')?.hasError('pattern') && form.get('year')?.touched){
+            <div class="alert alert-danger error-message">El numero es invalido</div>
+        }
+    </div>
+    <div class="input-container">
+        <label>Servicios</label>
+        <div formArrayName="services">
+            @for (service of servicesList; let i = $index; track service.id) {
+            <div>
+                <label>
+                <input type="checkbox" [formControlName]="i" />
+                {{ service.name }}
+                </label>
+            </div>
+            }
+        </div>
+        @if (form.get('services')?.hasError('minSelected') && form.get('services')?.touched) {
+            <div class="alert alert-danger error-message">Debes seleccionar al menos un servicio.</div>
+        }
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="form.invalid">
+            Enviar
+    </button>
+
+</form>

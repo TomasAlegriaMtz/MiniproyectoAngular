@@ -28,6 +28,8 @@ export class FormularioComponent {
   };
   carModels : any = [];
   minDate: string;
+ 
+
   constructor(public autosNuevosService : ServicioNuevosAutosService, public autosService: ServicioAutosService) {
     // Configurar fecha mínima
     const today = new Date();
@@ -58,8 +60,26 @@ export class FormularioComponent {
     this.carModels = data.cars;
     console.log(this.carModels)
   }
-  onTestDriveSubmit(){
-
+  onTestDriveSubmit(form: NgForm) {
+    if (form.valid) {
+      // Guardar testDriveModel en localStorage
+      localStorage.setItem('testDriveModel', JSON.stringify(this.testDriveModel));
+      console.log('Datos guardados en localStorage:', this.testDriveModel);
+      // Opcional: Mostrar mensaje de éxito con SweetAlert
+      Swal.fire({
+        icon: 'success',
+        title: 'Éxito',
+        text: 'Datos del formulario guardados en localStorage.',
+      });
+    } else {
+      console.log('Formulario no válido');
+      // Opcional: Mostrar mensaje de error
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'Por favor, completa el formulario correctamente.',
+      });
+    }
   }
 
 

@@ -3,6 +3,7 @@ import { ServicioAutosService } from './servicio-autos.service';
 
 @Component({
   selector: 'app-seminuevos',
+  standalone:true,
   imports: [],
   templateUrl: './seminuevos.component.html',
   styleUrl: './seminuevos.component.css'
