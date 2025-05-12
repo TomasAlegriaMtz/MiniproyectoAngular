@@ -2,7 +2,7 @@ import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-contacto',
-  standalone:true,
+  standalone: true,
   imports: [],
 
   templateUrl: './contacto.component.html',
@@ -47,6 +47,14 @@ export class ContactoComponent implements AfterViewInit {
 
   //esta funcion va a renderizar nuestros valores
   loadShadow(): void {
+    this.items.forEach(item => {
+      item.style.transform = '';
+      item.style.zIndex = '';
+      item.style.filter = '';
+      item.style.opacity = '0';      // por defecto opaco 0
+      item.style.transition = 'opacity 1s'; // añade transición suave
+    });
+
     this.stt = 0;
     this.items[this.active].style.transform = `none`;
     this.items[this.active].style.zIndex = `1`;

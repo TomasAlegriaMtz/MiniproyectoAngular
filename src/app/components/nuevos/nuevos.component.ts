@@ -5,12 +5,8 @@ import { BuscadorComponent } from '../buscador/buscador.component';
 
 @Component({
   selector: 'app-nuevos',
-<<<<<<< HEAD
   standalone:true,
-  imports: [],
-=======
-  imports: [CurrencyPipe, UpperCasePipe, DatePipe, BuscadorComponent],
->>>>>>> cbd693de64a2686a7465213965a8c22f7c90eb7a
+  imports: [CurrencyPipe, DatePipe, UpperCasePipe, BuscadorComponent],
   templateUrl: './nuevos.component.html',
   styleUrl: './nuevos.component.css'
 })

@@ -28,6 +28,12 @@
     transition: 0.5s;
     left: calc(50% - 110px);
     top: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
 }
 
 #next,
@@ -45,4 +51,9 @@
 #next {
     left: unset;
     right: 50px;
+}
+
+img {
+    width: 100px;
+
 }

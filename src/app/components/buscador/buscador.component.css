@@ -1,0 +1,42 @@
+.buscador {
+    background-color: #1a1a1a;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+    width: 50vw;
+    margin: auto auto 2rem auto;
+}
+
+.input-busqueda {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    background-color: #2a2a2a;
+    color: #fff;
+    width: 100%;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+    font-size: 14px;
+}
+
+.input-busqueda:focus {
+    box-shadow: 0 0 8px 2px red;
+}
+
+.buscador button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background-color: #3a3a3a;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+}
+
+.buscador button:hover {
+    background-color: #4a4a4a;
+}
