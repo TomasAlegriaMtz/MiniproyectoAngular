@@ -2,12 +2,13 @@ import { Component } from '@angular/core';
 import { ServicioAutosService } from './servicio-autos.service';
 import { CurrencyPipe, DatePipe, UpperCasePipe } from '@angular/common';
 import { BuscadorComponent } from '../buscador/buscador.component';
+import { FinanciamientoComponent } from '../financiamiento/financiamiento.component';
 
 @Component({
   selector: 'app-seminuevos',
 
   standalone:true,
-  imports: [CurrencyPipe, UpperCasePipe, DatePipe, BuscadorComponent],
+  imports: [CurrencyPipe, UpperCasePipe, DatePipe, BuscadorComponent, FinanciamientoComponent],
 
   templateUrl: './seminuevos.component.html',
   styleUrl: './seminuevos.component.css'
