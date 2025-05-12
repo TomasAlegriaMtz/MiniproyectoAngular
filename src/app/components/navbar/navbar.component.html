@@ -17,8 +17,9 @@
 
     @if (isLogged) {
         <div class="">
-            <a routerLink="/login">Login</a>
-        <p>{{this.user}}</p>
+            <p>{{this.user}}</p>
         </div>
+    } @else {
+        <a routerLink="/login">Login</a>
     }
 </div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, FormsModule, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -15,8 +15,6 @@ import { DomseguroPipe } from '../../domseguro.pipe';
 export class LoginComponent {
 /*Video*/
 videoUrl: string = 'https://www.youtube.com/embed/5BB4yvRNEg0?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&playsinline=1&enablejsapi=1';
-
-
   formulario!: FormGroup;
   accounts!: { username: string, password: string }[];
 
@@ -67,6 +65,7 @@ videoUrl: string = 'https://www.youtube.com/embed/5BB4yvRNEg0?autoplay=1&mute=1&
           });
         }
       });
+
     } else {
       Swal.fire({
         icon: 'error',

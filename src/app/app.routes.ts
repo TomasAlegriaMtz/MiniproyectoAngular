@@ -29,5 +29,5 @@ export const routes: Routes = [
     ]
   },
 
-  { path: '**', redirectTo: '/login' }  // Redirige a login para rutas no encontradas
+  { path: '**', redirectTo: '/' }  // Redirige a login para rutas no encontradas
 ];

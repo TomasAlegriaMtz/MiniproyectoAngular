@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, DoCheck } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
@@ -9,12 +9,22 @@ import { CommonModule } from '@angular/common';
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
-export class NavbarComponent { 
+export class NavbarComponent implements DoCheck {
   user!: string;
   isLogged: boolean = false;
 
-  ngAfterViewInit(): void {
-    this.isLogged = Boolean(JSON.parse(localStorage.getItem('isLoggedIn') || '')) || false;
-    this.user = JSON.parse(localStorage.getItem('userLogueado') || '');
+  ngDoCheck(): void {
+    try {
+      const isLoggedRaw = localStorage.getItem('isLoggedIn');
+      const userRaw = localStorage.getItem('userLogueado');
+
+      this.isLogged = isLoggedRaw ? Boolean(JSON.parse(isLoggedRaw)) : false;
+      this.user = userRaw ? JSON.parse(userRaw) : '';
+    } catch (error) {
+      console.error('Error al leer del localStorage:', error);
+      this.isLogged = false;
+      this.user = '';
+    }
   }
+
 }
