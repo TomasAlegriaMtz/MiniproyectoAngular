@@ -14,8 +14,11 @@
         <a routerLink="/contacto">Contacto</a>
         <a routerLink="/formulario">Formulario</a>
     </div>
-    <div class="">
-        <a routerLink="/login">Login</a>
+
+    @if (isLogged) {
+        <div class="">
+            <a routerLink="/login">Login</a>
         <p>{{this.user}}</p>
-    </div>
+        </div>
+    }
 </div>

@@ -8,6 +8,7 @@ import { FormularioComponent } from './components/formulario/formulario.componen
 import { AuthGuard } from './auth.guard';
 import { LoginComponent } from './components/routes/login.component';
 import { HomeComponent } from './components/home/home.component';
+import { DatosAdminComponent } from './components/datos-admin/datos-admin.component';
 
 export const routes: Routes = [
  // Ruta para el login
@@ -23,7 +24,7 @@ export const routes: Routes = [
       { path: 'seminuevos', component: SeminuevosComponent },
       { path: 'contacto', component: ContactoComponent },
       { path: 'formulario', component: FormularioComponent },
-       { path: 'login', component: LoginComponent }  
+      { path: 'login', component: LoginComponent }  
       
     ]
   },
