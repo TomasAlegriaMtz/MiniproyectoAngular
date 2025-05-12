@@ -61,3 +61,58 @@
 .menu a:hover::after {
     transform: translateX(0);
 }
+
+.user-container {
+    position: relative;
+    display: inline-block;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    background: #1f1f1f;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.user-container:hover {
+    background: #2c2c2c;
+}
+
+.username {
+    margin: 0;
+}
+
+.logout-btn {
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    margin-top: 0.3rem;
+    background: #ff5252;
+    color: #fff;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.3rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.3s ease;
+}
+
+.logout-btn:hover {
+    background: #e04848;
+}
+
+.login-link {
+    color: #0099ff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 0.4rem;
+    transition: background 0.3s;
+}
+
+.login-link:hover {
+    background: #1e1e1e;
+}

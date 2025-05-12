@@ -12,6 +12,7 @@ import { CommonModule } from '@angular/common';
 export class NavbarComponent implements DoCheck {
   user!: string;
   isLogged: boolean = false;
+  showLogout: boolean = false;
 
   ngDoCheck(): void {
     try {
@@ -20,11 +21,20 @@ export class NavbarComponent implements DoCheck {
 
       this.isLogged = isLoggedRaw ? Boolean(JSON.parse(isLoggedRaw)) : false;
       this.user = userRaw ? JSON.parse(userRaw) : '';
+      this.showLogout = true;
     } catch (error) {
       console.error('Error al leer del localStorage:', error);
       this.isLogged = false;
       this.user = '';
     }
+  }
+
+  logout(): void {
+    this.isLogged = false;
+    this.user = '';
+    this.showLogout = false;
+    localStorage.setItem('isLoggedIn', 'false');
+    localStorage.setItem('userLogueado', '');
   }
 
 }
