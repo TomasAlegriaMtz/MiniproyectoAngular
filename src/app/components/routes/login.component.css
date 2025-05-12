@@ -15,12 +15,6 @@
     z-index: -1; /* Coloca el video detrás del formulario */
   }
 
-  
-  .error {
-    color: red;
-    font-size: 12px;
-  }
-
   /* From Uiverse.io by guilhermeyohan */ 
 .login-box {
   position: absolute;
