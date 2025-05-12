@@ -1,0 +1,39 @@
+.card-title {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.card-body {
+    padding-bottom: 0;
+}
+
+.card-footer {
+    padding-top: 0;
+}
+
+.btn-light {
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.card-img-top {
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.2);
+}
+
+.body_nuevos {
+    background-color: #0d0d0d;
+}
+
+.badge-available {
+    background-color: #D1FAE5;
+    color: #065F46;
+}
+
+.badge-unavailable {
+    background-color: #FEE2E2;
+    color: #991B1B;
+}

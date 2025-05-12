@@ -1,5 +1,5 @@
-.navbar{
-    background-color: black;
+.navbar {
+    background-color: #0d0d0d;
     color: grey;
     display: flex;
     flex-direction: row;
@@ -7,12 +7,14 @@
     justify-content: space-between;
     padding: 2.3em;
 }
-.logo a{
+
+.logo a {
     text-decoration: none;
     color: white;
     font-size: 20px;
 }
-.menu{
+
+.menu {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -21,7 +23,41 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
 }
-.menu a{
+
+.menu a {
     text-decoration: none;
+    position: relative;
+    padding: 10px 15px;
     color: white;
+    overflow: hidden;
+}
+
+.menu a::before,
+.menu a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    transition: transform 0.4s ease;
+}
+
+.menu a::before {
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+}
+
+.menu a::after {
+    bottom: 0;
+    left: 0;
+    transform: translateX(100%);
+}
+
+.menu a:hover::before {
+    transform: translateX(0);
+}
+
+.menu a:hover::after {
+    transform: translateX(0);
 }

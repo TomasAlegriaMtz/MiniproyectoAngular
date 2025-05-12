@@ -9,4 +9,10 @@ import { CommonModule } from '@angular/common';
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
-export class NavbarComponent { }
+export class NavbarComponent { 
+  user!: string;
+
+  ngAfterViewInit(): void {
+    this.user = JSON.parse(localStorage.getItem('userLogueado') || '');
+  }
+}

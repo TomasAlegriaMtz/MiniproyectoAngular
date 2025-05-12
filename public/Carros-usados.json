@@ -1,0 +1,985 @@
+{
+  "cars": [
+    {
+      "id": 1,
+      "brand": "Hyundai",
+      "model": "Elantra",
+      "year": 2020,
+      "color": "Gris",
+      "price": 76166.06,
+      "fuel_type": "Diesel",
+      "transmission": "Automática",
+      "mileage": 51771,
+      "available": false,
+      "features": [
+        "Aire acondicionado",
+        "Bluetooth",
+        "Asientos calefactables",
+        "Sunroof",
+        "Cámara trasera"
+      ],
+      "location": "León",
+      "img": "https://img.remediosdigitales.com/8f3789/hyundai-elantra-2020-/1366_2000.jpg"
+    },
+    {
+      "id": 2,
+      "brand": "Nissan",
+      "model": "Aveo",
+      "year": 2016,
+      "color": "Azul",
+      "price": 24799.46,
+      "fuel_type": "Híbrido",
+      "transmission": "Automática",
+      "mileage": 73814,
+      "available": true,
+      "features": [
+        "Sunroof",
+        "Aire acondicionado",
+        "Bluetooth"
+      ],
+      "location": "Puebla",
+      "img": "https://images.prd.kavak.io/eyJidWNrZXQiOiJrYXZhay1pbWFnZXMiLCJrZXkiOiJpbWFnZXMvMzkwNjM4L0VYVEVSSU9SLWZyb250U2lkZVBpbG90TmVhci0xNzQxOTkzNDQwMjkyLmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjU0MCwiaGVpZ2h0IjozMTAsImJhY2tncm91bmQiOnsiciI6MjU1LCJnIjoyNTUsImIiOjI1NSwiYWxwaGEiOjB9fX19"
+    },
+    {
+      "id": 3,
+      "brand": "Chevrolet",
+      "model": "Aveo",
+      "year": 2016,
+      "color": "Rojo",
+      "price": 80863.09,
+      "fuel_type": "Diesel",
+      "transmission": "Automática",
+      "mileage": 36388,
+      "available": true,
+      "features": [
+        "Asientos calefactables",
+        "Bluetooth",
+        "Sunroof"
+      ],
+      "location": "Guadalajara",
+      "img": "https://www.autoasesor.com/chevrolet/imagenes/aveosedan2024.png"
+    },
+    {
+      "id": 4,
+      "brand": "Honda",
+      "model": "Civic",
+      "year": 2021,
+      "color": "Blanco",
+      "price": 82305.62,
+      "fuel_type": "Híbrido",
+      "transmission": "Automática",
+      "mileage": 29070,
+      "available": false,
+      "features": [
+        "Bluetooth",
+        "GPS",
+        "Cámara trasera"
+      ],
+      "location": "Puebla",
+      "img": "https://www.hondaframework.com/resourcefiles/new-car-model-snippet-images/apariencia-civic-2025.jpg"
+    },
+    {
+      "id": 5,
+      "brand": "Hyundai",
+      "model": "Elantra",
+      "year": 2015,
+      "color": "Azul",
+      "price": 79057.36,
+      "fuel_type": "Eléctrico",
+      "transmission": "Manual",
+      "mileage": 62606,
+      "available": false,
+      "features": [
+        "Sunroof",
+        "Aire acondicionado",
+        "Bluetooth",
+        "Asientos calefactables"
+      ],
+      "location": "Ciudad de México",
+      "img": "https://img.remediosdigitales.com/39b9a0/650_1000_hyundai_elantra_650_/1366_2000.jpg"
+    },
+    {
+      "id": 6,
+      "brand": "Hyundai",
+      "model": "Elantra",
+      "year": 2018,
+      "color": "Negro",
+      "price": 18342.02,
+      "fuel_type": "Gasolina",
+      "transmission": "Automática",
+      "mileage": 8212,
+      "available": false,
+      "features": [
+        "GPS",
+        "Sunroof"
+      ],
+      "location": "Guadalajara",
+      "img": "https://img.remediosdigitales.com/8f3789/hyundai-elantra-2020-/1366_2000.jpg"
+    },
+    {
+      "id": 7,
+      "brand": "Honda",
+      "model": "Civic",
+      "year": 2019,
+      "color": "Plata",
+      "price": 40399.14,
+      "fuel_type": "Eléctrico",
+      "transmission": "Manual",
+      "mileage": 87041,
+      "available": true,
+      "features": [
+        "Bluetooth",
+        "Asientos calefactables"
+      ],
+      "location": "Mérida",
+      "img": "https://images.prd.kavak.io/eyJidWNrZXQiOiJrYXZhay1pbWFnZXMiLCJrZXkiOiJpbWFnZXMvMzg3MDEwL0VYVEVSSU9SLWZyb250U2lkZVBpbG90TmVhci0xNzQxMjE2NjA3MTY4LmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjU0MCwiaGVpZ2h0IjozMTAsImJhY2tncm91bmQiOnsiciI6MjU1LCJnIjoyNTUsImIiOjI1NSwiYWxwaGEiOjB9fX19"
+    },
+    {
+      "id": 8,
+      "brand": "Kia",
+      "model": "Ceed",
+      "year": 2021,
+      "color": "Gris",
+      "price": 48720.06,
+      "fuel_type": "Diesel",
+      "transmission": "Manual",
+      "mileage": 86219,
+      "available": false,
+      "features": [
+        "Sunroof",
+        "Cámara trasera",
+        "GPS",
+        "Aire acondicionado"
+      ],
+      "location": "León",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpqDz-tSKfJxBwnouMnsK1KgceKB0yRAG1OA&s"
+    },
+    {
+      "id": 9,
+      "brand": "Hyundai",
+      "model": "Corolla",
+      "year": 2015,
+      "color": "Blanco",
+      "price": 18450.73,
+      "fuel_type": "Híbrido",
+      "transmission": "Automática",
+      "mileage": 110825,
+      "available": true,
+      "features": [
+        "Sunroof",
+        "Cámara trasera",
+        "Aire acondicionado",
+        "GPS",
+        "Bluetooth"
+      ],
+      "location": "Tijuana",
+      "img": "https://www.buyatoyota.com/sharpr/bat/assets/img/vehicle-compare/2023/corolla_compare_hero.png"
+    },
+    {
+      "id": 10,
+      "brand": "BMW",
+      "model": "X5",
+      "year": 2021,
+      "color": "Negro",
+      "price": 59263.74,  
+      "fuel_type": "Diesel",
+      "transmission": "Automática",
+      "mileage": 47305,
+      "available": true,
+      "features": [
+        "Sunroof",
+        "Bluetooth",
+        "Asientos calefactables"
+      ],
+      "location": "Querétaro",
+      "img": "https://cdn.autobild.es/sites/navi.axelspringer.es/public/bdc/dc/fotos/BMW_X5_2023.jpg?tf=3840x"
+    },
+    {
+      "id": 11,
+      "brand": "Mazda",
+      "model": "Mazda3",
+      "year": 2017,
+      "color": "Rojo",
+      "price": 79383.95,
+      "fuel_type": "Eléctrico",
+      "transmission": "Automática",
+      "mileage": 15655,
+      "available": true,
+      "features": [
+        "Cámara trasera",
+        "Sunroof",
+        "Aire acondicionado",
+        "GPS"
+      ],
+      "location": "Mérida",
+      "img": "https://alden.mx/wp-content/uploads/2023/06/mazda3-sedan-galeria-v1-01-scaled.jpg"
+    },
+    {
+      "id": 12,
+      "brand": "Hyundai",
+      "model": "Elantra",
+      "year": 2019,
+      "color": "Gris",
+      "price": 30597.37,
+      "fuel_type": "Híbrido",
+      "transmission": "CVT",
+      "mileage": 26054,
+      "available": false,
+      "features": [
+        "Aire acondicionado",
+        "Cámara trasera",
+        "Sunroof",
+        "Bluetooth"
+      ],
+      "location": "Ciudad de México",
+      "img": "https://www.hyundainews.com/assets/images/thumbnail-true/56894-2024hyundaielantra01.jpg"
+    },
+    {
+      "id": 13,
+      "brand": "Ford",
+      "model": "Rio",
+      "year": 2016,
+      "color": "Gris",
+      "price": 29767.33,
+      "fuel_type": "Híbrido",
+      "transmission": "Manual",
+      "mileage": 73927,
+      "available": true,
+      "features": [
+        "Cámara trasera",
+        "Aire acondicionado",
+        "Sunroof",
+        "Asientos calefactables",
+        "Bluetooth"
+      ],
+      "location": "Tijuana",
+      "img": "https://cdn.autobild.es/sites/navi.axelspringer.es/public/media/image/2019/08/comparativa-ford-fiesta-active-hyundai-kona-vw-t-cross_3.jpg?tf=3840x"
+    },
+    {
+      "id": 14,
+      "brand": "Honda",
+      "model": "Corolla",
+      "year": 2021,
+      "color": "Blanco",
+      "price": 32645.52,
+      "fuel_type": "Eléctrico",
+      "transmission": "Manual",
+      "mileage": 61514,
+      "available": true,
+      "features": [
+        "Asientos calefactables",
+        "Cámara trasera",
+        "Sunroof",
+        "Aire acondicionado",
+        "GPS"
+      ],
+      "location": "Tijuana",
+      "img": "https://www.usnews.com/object/image/00000193-8de8-dd20-a9bb-8dfd3e4b0000/2025-corolla-xse-windchillpearl-053-1500x1000.jpg?update-time=1733252627203&size=responsive640"
+    },
+    {
+      "id": 15,
+      "brand": "Toyota",
+      "model": "Corolla",
+      "year": 2016,
+      "color": "Negro",
+      "price": 63967.03,
+      "fuel_type": "Híbrido",
+      "transmission": "CVT",
+      "mileage": 24036,
+      "available": false,
+      "features": [
+        "Asientos calefactables",
+        "Aire acondicionado"
+      ],
+      "location": "Monterrey",
+      "img": "https://resizer.glanacion.com/resizer/v2/el-toyota-corolla-renovado-en-2023-por-la-marca-7H7VB2REHZERRL4YJDG5ECG5GE.jpg?auth=33c3e83626046ba0c595eba9505419d30d47c5e62ed93073e5afdcdb87b1801c&width=1280&height=854&quality=70&smart=true"
+    },
+    {
+      "id": 16,
+      "brand": "Hyundai",
+      "model": "Elantra",
+      "year": 2018,
+      "color": "Verde",
+      "price": 88158.36,
+      "fuel_type": "Eléctrico",
+      "transmission": "CVT",
+      "mileage": 98511,
+      "available": false,
+      "features": [
+        "GPS",
+        "Cámara trasera"
+      ],
+      "location": "Querétaro",
+      "img": "https://elcomercio.pe/resizer/6hBarKSthpCUjVbA7_V8k64nhEg=/1200x675/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/HKZFMYFLMFAMPA3KDJDP5NVIOQ.jpg"
+    },
+    {
+      "id": 17,
+      "brand": "BMW",
+      "model": "X5",
+      "year": 2021,
+      "color": "Blanco",
+      "price": 78012.12,
+      "fuel_type": "Gasolina",
+      "transmission": "CVT",
+      "mileage": 96958,
+      "available": true,
+      "features": [
+        "Aire acondicionado",
+        "Asientos calefactables",
+        "Sunroof",
+        "Cámara trasera"
+      ],
+      "location": "Ciudad de México",
+      "img": "https://noticias.coches.com/wp-content/uploads/2018/06/BMW-X5-2019-12.jpg"
+    },
+    {
+      "id": 18,
+      "brand": "Toyota",
+      "model": "Corolla",
+      "year": 2022,
+      "color": "Negro",
+      "price": 24086.58,
+      "fuel_type": "Eléctrico",
+      "transmission": "Manual",
+      "mileage": 48491,
+      "available": true,
+      "features": [
+        "Sunroof",
+        "Bluetooth",
+        "Aire acondicionado",
+        "GPS"
+      ],
+      "location": "León",
+      "img": "https://resizer.glanacion.com/resizer/v2/el-toyota-corolla-renovado-en-2023-por-la-marca-7H7VB2REHZERRL4YJDG5ECG5GE.jpg?auth=33c3e83626046ba0c595eba9505419d30d47c5e62ed93073e5afdcdb87b1801c&width=1280&height=854&quality=70&smart=true"
+    },
+    {
+      "id": 19,
+      "brand": "Toyota",
+      "model": "Corolla",
+      "year": 2015,
+      "color": "Rojo",
+      "price": 48114.69,
+      "fuel_type": "Eléctrico",
+      "transmission": "Manual",
+      "mileage": 64841,
+      "available": true,
+      "features": [
+        "Bluetooth",
+        "Asientos calefactables",
+        "Aire acondicionado"
+      ],
+      "location": "Monterrey",
+      "img": "https://resizer.glanacion.com/resizer/v2/el-toyota-corolla-renovado-en-2023-por-la-marca-7H7VB2REHZERRL4YJDG5ECG5GE.jpg?auth=33c3e83626046ba0c595eba9505419d30d47c5e62ed93073e5afdcdb87b1801c&width=1280&height=854&quality=70&smart=true"
+    },
+    {
+      "id": 20,
+      "brand": "Ford",
+      "model": "Focus",
+      "year": 2016,
+      "color": "Azul",
+      "price": 62529.72,
+      "fuel_type": "Híbrido",
+      "transmission": "Automática",
+      "mileage": 71465,
+      "available": true,
+      "features": [
+        "Asientos calefactables",
+        "Aire acondicionado",
+        "Bluetooth",
+        "GPS",
+        "Cámara trasera"
+      ],
+      "location": "Monterrey",
+      "img": "https://fotos.perfil.com/2021/10/15/trim/876/492/ford-focus-2022-1246537.jpg"
+    },
+    {
+      "id": 21,
+      "brand": "BMW",
+      "model": "X5",
+      "year": 2020,
+      "color": "Azul",
+      "price": 87907.44,
+      "fuel_type": "Diesel",
+      "transmission": "Manual",
+      "mileage": 33522,
+      "available": true,
+      "features": [
+        "Sunroof",
+        "Asientos calefactables",
+        "GPS"
+      ],
+      "location": "Monterrey",
+      "img": "https://cdn.autobild.es/sites/navi.axelspringer.es/public/bdc/dc/fotos/BMW_X5_2023.jpg?tf=3840x"
+    },
+    {
+      "id": 22,
+      "brand": "Toyota",
+      "model": "Corolla",
+      "year": 2017,
+      "color": "Azul",
+      "price": 20680.46,
+      "fuel_type": "Eléctrico",
+      "transmission": "Automática",
+      "mileage": 29855,
+      "available": true,
+      "features": [
+        "Bluetooth",
+        "Cámara trasera",
+        "Asientos calefactables",
+        "GPS",
+        "Aire acondicionado"
+      ],
+      "location": "León",
+      "img": "https://resizer.glanacion.com/resizer/v2/el-toyota-corolla-renovado-en-2023-por-la-marca-7H7VB2REHZERRL4YJDG5ECG5GE.jpg?auth=33c3e83626046ba0c595eba9505419d30d47c5e62ed93073e5afdcdb87b1801c&width=1280&height=854&quality=70&smart=true"
+    },
+    {
+      "id": 23,
+      "brand": "Volkswagen",
+      "model": "Jetta",
+      "year": 2019,
+      "color": "Verde",
+      "price": 41972.97,
+      "fuel_type": "Diesel",
+      "transmission": "Manual",
+      "mileage": 29411,
+      "available": true,
+      "features": [
+        "Bluetooth",
+        "Asientos calefactables",
+        "Sunroof",
+        "Cámara trasera"
+      ],
+      "location": "Mérida",
+      "img": "https://http2.mlstatic.com/D_NQ_718999-MLA79817237034_102024-OO.jpg"
+    },
+    {
+      "id": 24,
+      "brand": "Ford",
+      "model": "Rio",
+      "year": 2020,
+      "color": "Azul",
+      "price": 44941.96,
+      "fuel_type": "Gasolina",
+      "transmission": "Manual",
+      "mileage": 99773,
+      "available": true,
+      "features": [
+        "Aire acondicionado",
+        "Sunroof"
+      ],
+      "location": "Guadalajara",
+      "img": "https://cdn.autobild.es/sites/navi.axelspringer.es/public/media/image/2019/08/comparativa-ford-fiesta-active-hyundai-kona-vw-t-cross_3.jpg?tf=3840x"
+    },
+    {
+      "id": 25,
+      "brand": "BMW",
+      "model": "X5",
+      "year": 2019,
+      "color": "Verde",
+      "price": 26086.84,
+      "fuel_type": "Eléctrico",
+      "transmission": "Manual",
+      "mileage": 12968,
+      "available": true,
+      "features": [
+        "Sunroof",
+        "Aire acondicionado",
+        "GPS",
+        "Asientos calefactables"
+      ],
+      "location": "León",
+      "img": "https://cdn.autobild.es/sites/navi.axelspringer.es/public/bdc/dc/fotos/BMW_X5_2023.jpg?tf=3840x"
+    },
+    {
+      "id": 26,
+      "brand": "Nissan",
+      "model": "Sentra",
+      "year": 2020,
+      "color": "Azul",
+      "price": 44531.52,
+      "fuel_type": "Híbrido",
+      "transmission": "Automática",
+      "mileage": 49045,
+      "available": false,
+      "features": [
+        "Bluetooth",
+        "Sunroof",
+        "Asientos calefactables"
+      ],
+      "location": "Monterrey",
+      "img": "https://www.nissansanje.com.mx/static/agency-go-virtual/Nissan/Accesorios_Nissan/Sentra/nissan-sentra-accesorios.jpg"
+    },
+    {
+      "id": 27,
+      "brand": "Volkswagen",
+      "model": "Jetta",
+      "year": 2022,
+      "color": "Plata",
+      "price": 23337.45,
+      "fuel_type": "Híbrido",
+      "transmission": "Automática",
+      "mileage": 50205,
+      "available": true,
+      "features": [
+        "Sunroof",
+        "Aire acondicionado",
+        "Cámara trasera",
+        "Asientos calefactables"
+      ],
+      "location": "Tijuana",
+      "img": "https://http2.mlstatic.com/D_NQ_718999-MLA79817237034_102024-OO.jpg"
+    },
+    {
+      "id": 28,
+      "brand": "Honda",
+      "model": "Civic",
+      "year": 2017,
+      "color": "Gris",
+      "price": 68143.02,
+      "fuel_type": "Híbrido",
+      "transmission": "Manual",
+      "mileage": 103722,
+      "available": true,
+      "features": [
+        "Cámara trasera",
+        "Bluetooth"
+      ],
+      "location": "Mérida",
+      "img": "https://images.prd.kavak.io/eyJidWNrZXQiOiJrYXZhay1pbWFnZXMiLCJrZXkiOiJpbWFnZXMvMzg3MDEwL0VYVEVSSU9SLWZyb250U2lkZVBpbG90TmVhci0xNzQxMjE2NjA3MTY4LmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjU0MCwiaGVpZ2h0IjozMTAsImJhY2tncm91bmQiOnsiciI6MjU1LCJnIjoyNTUsImIiOjI1NSwiYWxwaGEiOjB9fX19"
+    },
+    {
+      "id": 29,
+      "brand": "Chevrolet",
+      "model": "Aveo",
+      "year": 2022,
+      "color": "Azul",
+      "price": 17387.46,
+      "fuel_type": "Gasolina",
+      "transmission": "Automática",
+      "mileage": 83100,
+      "available": false,
+      "features": [
+        "Cámara trasera",
+        "Asientos calefactables"
+      ],
+      "location": "Tijuana",
+      "img": "https://www.autoasesor.com/chevrolet/imagenes/aveosedan2024.png"
+    },
+    {
+      "id": 30,
+      "brand": "BMW",
+      "model": "X5",
+      "year": 2022,
+      "color": "Gris",
+      "price": 78194.03,
+      "fuel_type": "Híbrido",
+      "transmission": "Manual",
+      "mileage": 20029,
+      "available": true,
+      "features": [
+        "Bluetooth",
+        "Cámara trasera"
+      ],
+      "location": "Monterrey",
+      "img": "https://cdn.autobild.es/sites/navi.axelspringer.es/public/bdc/dc/fotos/BMW_X5_2023.jpg?tf=3840x"
+    },
+    {
+      "id": 31,
+      "brand": "Honda",
+      "model": "Civic",
+      "year": 2021,
+      "color": "Blanco",
+      "price": 64888.15,
+      "fuel_type": "Híbrido",
+      "transmission": "Manual",
+      "mileage": 19149,
+      "available": true,
+      "features": [
+        "Cámara trasera",
+        "Sunroof"
+      ],
+      "location": "Ciudad de México",
+      "img": "https://images.prd.kavak.io/eyJidWNrZXQiOiJrYXZhay1pbWFnZXMiLCJrZXkiOiJpbWFnZXMvMzg3MDEwL0VYVEVSSU9SLWZyb250U2lkZVBpbG90TmVhci0xNzQxMjE2NjA3MTY4LmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjU0MCwiaGVpZ2h0IjozMTAsImJhY2tncm91bmQiOnsiciI6MjU1LCJnIjoyNTUsImIiOjI1NSwiYWxwaGEiOjB9fX19"
+    },
+    {
+      "id": 32,
+      "brand": "Honda",
+      "model": "Civic",
+      "year": 2017,
+      "color": "Gris",
+      "price": 59516.0,
+      "fuel_type": "Gasolina",
+      "transmission": "Manual",
+      "mileage": 38454,
+      "available": false,
+      "features": [
+        "GPS",
+        "Aire acondicionado",
+        "Bluetooth"
+      ],
+      "location": "Puebla",
+      "img": "https://images.prd.kavak.io/eyJidWNrZXQiOiJrYXZhay1pbWFnZXMiLCJrZXkiOiJpbWFnZXMvMzg3MDEwL0VYVEVSSU9SLWZyb250U2lkZVBpbG90TmVhci0xNzQxMjE2NjA3MTY4LmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjU0MCwiaGVpZ2h0IjozMTAsImJhY2tncm91bmQiOnsiciI6MjU1LCJnIjoyNTUsImIiOjI1NSwiYWxwaGEiOjB9fX19"
+    },
+    {
+      "id": 33,
+      "brand": "Mazda",
+      "model": "Mazda3",
+      "year": 2016,
+      "color": "Azul",
+      "price": 86151.3,
+      "fuel_type": "Eléctrico",
+      "transmission": "Manual",
+      "mileage": 73476,
+      "available": true,
+      "features": [
+        "Aire acondicionado",
+        "Asientos calefactables",
+        "GPS"
+      ],
+      "location": "Monterrey",
+      "img": "https://alden.mx/wp-content/uploads/2023/06/mazda3-sedan-galeria-v1-01-scaled.jpg"
+    },
+    {
+      "id": 34,
+      "brand": "Volkswagen",
+      "model": "Jetta",
+      "year": 2015,
+      "color": "Gris",
+      "price": 16256.12,
+      "fuel_type": "Gasolina",
+      "transmission": "Automática",
+      "mileage": 11020,
+      "available": false,
+      "features": [
+        "Aire acondicionado",
+        "Sunroof",
+        "GPS",
+        "Asientos calefactables",
+        "Bluetooth"
+      ],
+      "location": "Tijuana",
+      "img": "https://http2.mlstatic.com/D_NQ_718999-MLA79817237034_102024-OO.jpg"
+    },
+    {
+      "id": 35,
+      "brand": "Chevrolet",
+      "model": "Aveo",
+      "year": 2022,
+      "color": "Rojo",
+      "price": 64146.78,
+      "fuel_type": "Gasolina",
+      "transmission": "Manual",
+      "mileage": 43314,
+      "available": true,
+      "features": [
+        "Sunroof",
+        "Asientos calefactables"
+      ],
+      "location": "Guadalajara",
+      "img": "https://www.autoasesor.com/chevrolet/imagenes/aveosedan2024.png"
+    },
+    {
+      "id": 36,
+      "brand": "Toyota",
+      "model": "Corolla",
+      "year": 2015,
+      "color": "Rojo",
+      "price": 55472.48,
+      "fuel_type": "Diesel",
+      "transmission": "Automática",
+      "mileage": 65490,
+      "available": true,
+      "features": [
+        "Aire acondicionado",
+        "Asientos calefactables",
+        "Sunroof",
+        "Cámara trasera"
+      ],
+      "location": "Puebla",
+      "img": "https://resizer.glanacion.com/resizer/v2/el-toyota-corolla-renovado-en-2023-por-la-marca-7H7VB2REHZERRL4YJDG5ECG5GE.jpg?auth=33c3e83626046ba0c595eba9505419d30d47c5e62ed93073e5afdcdb87b1801c&width=1280&height=854&quality=70&smart=true"
+    },
+    {
+      "id": 37,
+      "brand": "Honda",
+      "model": "Civic",
+      "year": 2022,
+      "color": "Rojo",
+      "price": 47030.38,
+      "fuel_type": "Diesel",
+      "transmission": "Automática",
+      "mileage": 72774,
+      "available": true,
+      "features": [
+        "Cámara trasera",
+        "Aire acondicionado",
+        "Bluetooth",
+        "Asientos calefactables",
+        "GPS"
+      ],
+      "location": "Puebla",
+      "img": "https://images.prd.kavak.io/eyJidWNrZXQiOiJrYXZhay1pbWFnZXMiLCJrZXkiOiJpbWFnZXMvMzg3MDEwL0VYVEVSSU9SLWZyb250U2lkZVBpbG90TmVhci0xNzQxMjE2NjA3MTY4LmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjU0MCwiaGVpZ2h0IjozMTAsImJhY2tncm91bmQiOnsiciI6MjU1LCJnIjoyNTUsImIiOjI1NSwiYWxwaGEiOjB9fX19"
+    },
+    {
+      "id": 38,
+      "brand": "Hyundai",
+      "model": "Elantra",
+      "year": 2023,
+      "color": "Gris",
+      "price": 59965.21,
+      "fuel_type": "Gasolina",
+      "transmission": "Automática",
+      "mileage": 94282,
+      "available": true,
+      "features": [
+        "GPS",
+        "Bluetooth",
+        "Aire acondicionado"
+      ],
+      "location": "León",
+      "img": "https://elcomercio.pe/resizer/6hBarKSthpCUjVbA7_V8k64nhEg=/1200x675/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/HKZFMYFLMFAMPA3KDJDP5NVIOQ.jpg"
+    },
+    {
+      "id": 39,
+      "brand": "Nissan",
+      "model": "Sentra",
+      "year": 2022,
+      "color": "Negro",
+      "price": 23627.29,
+      "fuel_type": "Gasolina",
+      "transmission": "CVT",
+      "mileage": 68656,
+      "available": false,
+      "features": [
+        "Sunroof",
+        "Bluetooth",
+        "Aire acondicionado",
+        "GPS",
+        "Cámara trasera"
+      ],
+      "location": "Guadalajara",
+      "img": "https://www.nissansanje.com.mx/static/agency-go-virtual/Nissan/Accesorios_Nissan/Sentra/nissan-sentra-accesorios.jpg"
+    },
+    {
+      "id": 40,
+      "brand": "BMW",
+      "model": "X5",
+      "year": 2023,
+      "color": "Blanco",
+      "price": 39381.13,
+      "fuel_type": "Diesel",
+      "transmission": "CVT",
+      "mileage": 118457,
+      "available": true,
+      "features": [
+        "Cámara trasera",
+        "Aire acondicionado",
+        "Bluetooth",
+        "Asientos calefactables",
+        "Sunroof"
+      ],
+      "location": "Tijuana",
+      "img": "https://cdn.autobild.es/sites/navi.axelspringer.es/public/bdc/dc/fotos/BMW_X5_2023.jpg?tf=3840x"
+    },
+    {
+      "id": 41,
+      "brand": "Honda",
+      "model": "Civic",
+      "year": 2016,
+      "color": "Plata",
+      "price": 70811.65,
+      "fuel_type": "Gasolina",
+      "transmission": "Automática",
+      "mileage": 69964,
+      "available": false,
+      "features": [
+        "Asientos calefactables",
+        "Sunroof",
+        "Bluetooth"
+      ],
+      "location": "Monterrey",
+      "img": "https://images.prd.kavak.io/eyJidWNrZXQiOiJrYXZhay1pbWFnZXMiLCJrZXkiOiJpbWFnZXMvMzg3MDEwL0VYVEVSSU9SLWZyb250U2lkZVBpbG90TmVhci0xNzQxMjE2NjA3MTY4LmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjU0MCwiaGVpZ2h0IjozMTAsImJhY2tncm91bmQiOnsiciI6MjU1LCJnIjoyNTUsImIiOjI1NSwiYWxwaGEiOjB9fX19"
+    },
+    {
+      "id": 42,
+      "brand": "Ford",
+      "model": "Rio",
+      "year": 2021,
+      "color": "Negro",
+      "price": 29978.96,
+      "fuel_type": "Diesel",
+      "transmission": "Manual",
+      "mileage": 97946,
+      "available": false,
+      "features": [
+        "GPS",
+        "Bluetooth",
+        "Cámara trasera"
+      ],
+      "location": "León",
+      "img": "https://cdn.autobild.es/sites/navi.axelspringer.es/public/media/image/2019/08/comparativa-ford-fiesta-active-hyundai-kona-vw-t-cross_3.jpg?tf=3840x"
+    },
+    {
+      "id": 43,
+      "brand": "Nissan",
+      "model": "Sentra",
+      "year": 2017,
+      "color": "Gris",
+      "price": 81767.83,
+      "fuel_type": "Eléctrico",
+      "transmission": "Manual",
+      "mileage": 61949,
+      "available": true,
+      "features": [
+        "Asientos calefactables",
+        "Aire acondicionado",
+        "Sunroof",
+        "GPS"
+      ],
+      "location": "Mérida",
+      "img": "https://www.nissansanje.com.mx/static/agency-go-virtual/Nissan/Accesorios_Nissan/Sentra/nissan-sentra-accesorios.jpg"
+    },
+    {
+      "id": 44,
+      "brand": "Volkswagen",
+      "model": "Jetta",
+      "year": 2021,
+      "color": "Blanco",
+      "price": 59456.63,
+      "fuel_type": "Eléctrico",
+      "transmission": "CVT",
+      "mileage": 56972,
+      "available": true,
+      "features": [
+        "Cámara trasera",
+        "Sunroof",
+        "GPS",
+        "Bluetooth"
+      ],
+      "location": "Monterrey",
+      "img": "https://http2.mlstatic.com/D_NQ_718999-MLA79817237034_102024-OO.jpg"
+    },
+    {
+      "id": 45,
+      "brand": "Ford",
+      "model": "Focus",
+      "year": 2019,
+      "color": "Blanco",
+      "price": 67504.66,
+      "fuel_type": "Híbrido",
+      "transmission": "Automática",
+      "mileage": 90764,
+      "available": false,
+      "features": [
+        "Aire acondicionado",
+        "Sunroof",
+        "GPS",
+        "Cámara trasera"
+      ],
+      "location": "León",
+      "img": "https://fotos.perfil.com/2021/10/15/trim/876/492/ford-focus-2022-1246537.jpg"
+    },
+    {
+      "id": 46,
+      "brand": "Volkswagen",
+      "model": "Jetta",
+      "year": 2017,
+      "color": "Plata",
+      "price": 64031.65,
+      "fuel_type": "Gasolina",
+      "transmission": "CVT",
+      "mileage": 115616,
+      "available": false,
+      "features": [
+        "Asientos calefactables",
+        "Bluetooth",
+        "Aire acondicionado",
+        "Cámara trasera",
+        "GPS"
+      ],
+      "location": "Mérida",
+      "img": "https://http2.mlstatic.com/D_NQ_718999-MLA79817237034_102024-OO.jpg"
+    },
+    {
+      "id": 47,
+      "brand": "Volkswagen",
+      "model": "Jetta",
+      "year": 2015,
+      "color": "Plata",
+      "price": 51981.59,
+      "fuel_type": "Gasolina",
+      "transmission": "Automática",
+      "mileage": 64939,
+      "available": false,
+      "features": [
+        "Asientos calefactables",
+        "Bluetooth",
+        "Cámara trasera",
+        "GPS",
+        "Sunroof"
+      ],
+      "location": "Puebla",
+      "img": "https://http2.mlstatic.com/D_NQ_718999-MLA79817237034_102024-OO.jpg"
+    },
+    {
+      "id": 48,
+      "brand": "Toyota",
+      "model": "Corolla",
+      "year": 2019,
+      "color": "Blanco",
+      "price": 20097.85,
+      "fuel_type": "Eléctrico",
+      "transmission": "Manual",
+      "mileage": 98646,
+      "available": false,
+      "features": [
+        "Sunroof",
+        "GPS",
+        "Asientos calefactables",
+        "Cámara trasera",
+        "Bluetooth"
+      ],
+      "location": "Monterrey",
+      "img": "https://resizer.glanacion.com/resizer/v2/el-toyota-corolla-renovado-en-2023-por-la-marca-7H7VB2REHZERRL4YJDG5ECG5GE.jpg?auth=33c3e83626046ba0c595eba9505419d30d47c5e62ed93073e5afdcdb87b1801c&width=1280&height=854&quality=70&smart=true"
+    },
+    {
+      "id": 49,
+      "brand": "Volkswagen",
+      "model": "Jetta",
+      "year": 2017,
+      "color": "Gris",
+      "price": 63448.32,
+      "fuel_type": "Eléctrico",
+      "transmission": "CVT",
+      "mileage": 53816,
+      "available": false,
+      "features": [
+        "Aire acondicionado",
+        "Cámara trasera",
+        "Bluetooth",
+        "Sunroof"
+      ],
+      "location": "Monterrey",
+      "img": "https://http2.mlstatic.com/D_NQ_718999-MLA79817237034_102024-OO.jpg"
+    },
+    {
+      "id": 50,
+      "brand": "Toyota",
+      "model": "Corolla",
+      "year": 2022,
+      "color": "Rojo",
+      "price": 59940.7,
+      "fuel_type": "Gasolina",
+      "transmission": "CVT",
+      "mileage": 20256,
+      "available": true,
+      "features": [
+        "Cámara trasera",
+        "Bluetooth",
+        "Sunroof",
+        "Aire acondicionado"
+      ],
+      "location": "Guadalajara",
+      "img": "https://resizer.glanacion.com/resizer/v2/el-toyota-corolla-renovado-en-2023-por-la-marca-7H7VB2REHZERRL4YJDG5ECG5GE.jpg?auth=33c3e83626046ba0c595eba9505419d30d47c5e62ed93073e5afdcdb87b1801c&width=1280&height=854&quality=70&smart=true"
+    }
+  ]
+}
