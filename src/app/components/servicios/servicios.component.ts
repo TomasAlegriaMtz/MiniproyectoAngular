@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ReactiveFormsModule, FormControl, FormGroup, Validators, ValidatorFn, FormArray, AbstractControl,ValidationErrors } from '@angular/forms';
+import { ReactiveFormsModule, FormControl, FormGroup, Validators, ValidatorFn, FormArray, AbstractControl, ValidationErrors } from '@angular/forms';
 import Swal from 'sweetalert2';
 import { FinanciamientoComponent } from '../financiamiento/financiamiento.component';
 
@@ -7,12 +7,14 @@ import { FinanciamientoComponent } from '../financiamiento/financiamiento.compon
 
 @Component({
   selector: 'app-servicios',
-  standalone:true,
+  standalone: true,
   imports: [ReactiveFormsModule, FinanciamientoComponent],
   templateUrl: './servicios.component.html',
   styleUrl: './servicios.component.css'
 })
 export class ServiciosComponent {
+  //Array de listas de servicios disponibles
+  arrayServicesList!: any[];
 
   // Lista de servicios disponibles
   servicesList = [
@@ -22,12 +24,22 @@ export class ServiciosComponent {
     { id: 'maintenance', name: 'Mantenimiento general' },
     { id: 'diagnostic', name: 'Diagnóstico de fallas' }
   ];
+
+  constructor() {
+    const data = localStorage.getItem('serviciosModel');
+    data ?
+      this.arrayServicesList = JSON.parse(data) :
+      this.arrayServicesList = [];
+
+    //console.log(this.arrayServicesList);
+  }
+
   /*formularioReactivo para los servicios*/
-  public form : FormGroup = new FormGroup({
-    nombre : new FormControl('', [Validators.required, Validators.pattern('[A-Za-z\\s]+')]),
-    number : new FormControl('', [Validators.required, Validators.minLength(10), Validators.maxLength(10), Validators.pattern('^[0-9]{10}$')]),
-    model : new FormControl('', Validators.required),
-    year : new FormControl ('',[Validators.required, Validators.pattern('^[0-9]{4}$'), Validators.min(1970), Validators.max(2025)] ),
+  public form: FormGroup = new FormGroup({
+    nombre: new FormControl('', [Validators.required, Validators.pattern('[A-Za-z\\s]+')]),
+    number: new FormControl('', [Validators.required, Validators.minLength(10), Validators.maxLength(10), Validators.pattern('^[0-9]{10}$')]),
+    model: new FormControl('', Validators.required),
+    year: new FormControl('', [Validators.required, Validators.pattern('^[0-9]{4}$'), Validators.min(1970), Validators.max(2025)]),
     services: new FormArray(
       [
         new FormControl(false), // Cambio de aceite
@@ -52,8 +64,8 @@ export class ServiciosComponent {
         ...this.form.value,
         services: selectedServices // Reemplazar el array de booleanos por los IDs de servicios
       };
-
-      localStorage.setItem('serviciosModel', JSON.stringify(formValue));
+      this.arrayServicesList.push(formValue);
+      localStorage.setItem('serviciosModel', JSON.stringify(this.arrayServicesList));
       console.log('Datos guardados en localStorage:', formValue);
       Swal.fire({
         icon: 'success',
@@ -71,12 +83,12 @@ export class ServiciosComponent {
       });
     }
   }
-  public  minSelectedCheckboxes(min: number = 1) : ValidatorFn {
-  return (control: AbstractControl): ValidationErrors | null => {
-    const formArray = control as FormArray;
-    const totalSelected = formArray.controls.filter(control => control.value).length;
-    return totalSelected >= min ? null : { minSelected: true };
-  };
+  public minSelectedCheckboxes(min: number = 1): ValidatorFn {
+    return (control: AbstractControl): ValidationErrors | null => {
+      const formArray = control as FormArray;
+      const totalSelected = formArray.controls.filter(control => control.value).length;
+      return totalSelected >= min ? null : { minSelected: true };
+    };
   }
   // Getter para el FormArray de services
   get servicesControls() {

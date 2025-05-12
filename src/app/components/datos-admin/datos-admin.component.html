@@ -1,1 +1,53 @@
-<p>datos-admin works!</p>
+<div class="container">
+  <h2>Servicios Registrados</h2>
+
+  @if (arrayServicesList) {
+    @for (servicio of arrayServicesList; track servicio) {
+      <div class="card" (click)="seleccionarServicio(servicio)">
+        <h3>{{ servicio.nombre }}</h3>
+        <p><strong>Teléfono:</strong> {{ servicio.number }}</p>
+        <p><strong>Modelo:</strong> {{ servicio.model }}</p>
+        <p><strong>Año:</strong> {{ servicio.year }}</p>
+        <p><strong>Servicios:</strong></p>
+        <ul>
+          @for (s of servicio.services; track s) {
+            <li>{{ s }}</li>
+          }
+        </ul>
+      </div>
+    }
+  } @else {
+    <p>No hay servicios registrados.</p>
+  }
+
+  <hr>
+
+  @if (servicioSeleccionado) {
+    <div class="edit-form">
+      <h3>Editar Servicio</h3>
+      <form (ngSubmit)="guardarCambios()">
+        <label>
+          Nombre:
+          <input type="text" [(ngModel)]="servicioSeleccionado.nombre" name="nombre">
+        </label>
+        <label>
+          Teléfono:
+          <input type="text" [(ngModel)]="servicioSeleccionado.number" name="number">
+        </label>
+        <label>
+          Modelo:
+          <input type="text" [(ngModel)]="servicioSeleccionado.model" name="model">
+        </label>
+        <label>
+          Año:
+          <input type="text" [(ngModel)]="servicioSeleccionado.year" name="year">
+        </label>
+        <label>
+          Servicios (separados por coma):
+          <input type="text" [(ngModel)]="serviciosEditados" name="services">
+        </label>
+        <button type="submit">Guardar Cambios</button>
+      </form>
+    </div>
+  }
+</div>
