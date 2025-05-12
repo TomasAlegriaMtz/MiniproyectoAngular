@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import { ReactiveFormsModule, FormControl, FormGroup, Validators, ValidatorFn, FormArray, AbstractControl,ValidationErrors } from '@angular/forms';
 import Swal from 'sweetalert2';
+import { FinanciamientoComponent } from '../financiamiento/financiamiento.component';
+
 
 
 @Component({
   selector: 'app-servicios',
   standalone:true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, FinanciamientoComponent],
   templateUrl: './servicios.component.html',
   styleUrl: './servicios.component.css'
 })

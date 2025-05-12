@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { ServicioNuevosAutosService } from './servicio-nuevos-autos.service';
 import { CurrencyPipe, DatePipe, UpperCasePipe } from '@angular/common';
 import { BuscadorComponent } from '../buscador/buscador.component';
+import { FinanciamientoComponent } from '../financiamiento/financiamiento.component';
 
 @Component({
   selector: 'app-nuevos',
   standalone:true,
-  imports: [CurrencyPipe, DatePipe, UpperCasePipe, BuscadorComponent],
+  imports: [CurrencyPipe, DatePipe, UpperCasePipe, BuscadorComponent, FinanciamientoComponent],
   templateUrl: './nuevos.component.html',
   styleUrl: './nuevos.component.css'
 })

@@ -1,0 +1,39 @@
+<div class="financiamiento">
+  <h2>Cotiza el vehículo de tus Sueños</h2>
+
+  <form (ngSubmit)="calcular()" #form="ngForm" class="formulario">
+    <div>
+      <label>Precio del vehículo:</label>
+      <input type="number" [(ngModel)]="precioVehiculo" name="precio" required />
+    </div>
+
+    <div>
+      <label>Enganche:</label>
+      <input type="number" [(ngModel)]="enganche" name="enganche" required />
+    </div>
+
+    <div>
+      <label>Plazo (meses):</label>
+      <select [(ngModel)]="plazo" name="plazo" required>
+        @for (plazoItem of [12, 24, 36, 48, 60]; track plazoItem ){
+          <option [value]="plazoItem">{{ plazoItem }}</option>
+        }
+      </select>
+    </div>
+
+    <div>
+      <label>Tasa de interés anual (%):</label>
+      <input type="number" [(ngModel)]="tasaInteres" name="interes" required />
+    </div>
+
+    <button type="submit">Calcular</button>
+  </form>
+
+  @if (mensualidad > 0) {
+    <div class="resultado">
+      <h3>Resultados</h3>
+      <p><strong>Mensualidad estimada:</strong> ${{ mensualidad | number:'1.0-0' }}</p>
+      <p><strong>Total a pagar:</strong> ${{ totalCredito | number:'1.0-0' }}</p>
+    </div>
+  }
+</div>
