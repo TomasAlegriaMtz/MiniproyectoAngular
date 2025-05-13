@@ -48,7 +48,7 @@ export class ServiciosComponent {
         new FormControl(false), // Mantenimiento general
         new FormControl(false)  // Diagnóstico de fallas
       ],
-      [this.minSelectedCheckboxes(1)] // Al menos un servicio seleccionado
+      [this.minSelectedCheckboxes(1), this.maxSelectedCheckboxes(3)] // Al menos un servicio seleccionado
     ),
   });
 
@@ -83,6 +83,8 @@ export class ServiciosComponent {
       });
     }
   }
+  
+
   public minSelectedCheckboxes(min: number = 1): ValidatorFn {
     return (control: AbstractControl): ValidationErrors | null => {
       const formArray = control as FormArray;
@@ -90,8 +92,18 @@ export class ServiciosComponent {
       return totalSelected >= min ? null : { minSelected: true };
     };
   }
+
+  public maxSelectedCheckboxes(max: number = 3): ValidatorFn {
+  return (control: AbstractControl): ValidationErrors | null => {
+    const formArray = control as FormArray;
+    const totalSelected = formArray.controls.filter(control => control.value).length;
+    return totalSelected <= max ? null : { maxSelected: true };
+  };
+}
+
   // Getter para el FormArray de services
   get servicesControls() {
     return this.form.get('services') as FormArray;
   }
+  
 }
