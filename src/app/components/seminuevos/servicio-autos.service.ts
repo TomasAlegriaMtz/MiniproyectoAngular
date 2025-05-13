@@ -10,6 +10,6 @@ export class ServicioAutosService {
   constructor(private http: HttpClient) { }
 
   getValues(): any {
-    return this.http.get("https://automoviles.free.beeceptor.com/").pipe(take(1));
+    return this.http.get("https://autos-semi-usados.free.beeceptor.com").pipe(take(1));
   }
 }

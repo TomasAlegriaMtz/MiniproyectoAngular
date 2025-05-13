@@ -11,6 +11,6 @@ export class AutosNuevosService {
   constructor(private http: HttpClient) { }
 
   getValues(): any {
-    return this.http.get("https://automoviles-nuevos.free.beeceptor.com").pipe(take(1));
+    return this.http.get("https://autos-nuevos.free.beeceptor.com").pipe(take(1));
   }
 }

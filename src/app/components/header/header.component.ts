@@ -38,7 +38,8 @@ export class HeaderComponent implements OnInit {
       '/seminuevos': 'https://cdn.motor1.com/images/mgl/xEyvz/s1/2016-dodge-viper-acr.webp',
       '/contacto': 'https://images.ps-aws.com/c?url=https%3A%2F%2Fd3cm515ijfiu6w.cloudfront.net%2Fwp-content%2Fuploads%2F2023%2F06%2F26141455%2Flance-stroll-fernando-alonso-aston-martin-planet-f1-2023.jpg',
       '/formulario': 'https://www.imsa.com/wp-content/uploads/sites/32/2021/12/08/1_IWSC_BigPicture_820x436.jpg',
-      '/login': 'https://www.bmw-m.com/content/dam/bmw/marketBMW_M/www_bmw-m_com/fastlane/motorsport/2024/wallpaper-motorsport/bmw-m-wallpaper-bmw-hybrid-v8-side-4k.jpg'
+      '/login': 'https://www.bmw-m.com/content/dam/bmw/marketBMW_M/www_bmw-m_com/fastlane/motorsport/2024/wallpaper-motorsport/bmw-m-wallpaper-bmw-hybrid-v8-side-4k.jpg',
+      '/carComponent': 'https://pyxis.nymag.com/v1/imgs/df3/2f4/964355023c8621887c37e1fcc3c1dc3aa9-koeniggsegg-one1.2x.h473.w710.jpg'
     };
    // Mostrar u ocultar botones según la ruta
     const hideButtonsRoutes = ['/nuevos', '/login', '/seminuevos', '/contacto'];
