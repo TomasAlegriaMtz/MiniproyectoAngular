@@ -17,6 +17,7 @@ export class CarComponentComponent implements OnInit {
   carId!: number;
   isNew!: boolean;
 
+  //Inyectamos los dos servicios, de autos nuevos y seminuevos
   constructor(
     public autosNuevosService: AutosNuevosService,
     public autosUsadosService: AutosUsadosService,
