@@ -27,7 +27,8 @@ export const routes: Routes = [
       { path: 'formulario', component: FormularioComponent },
       { path: 'login', component: LoginComponent },
       { path: 'datos-admin', component: DatosAdminComponent},
-      { path: 'carComponent/:id/:isNew', component: CarComponentComponent}
+      { path: 'carComponent/:id/:isNew', component: CarComponentComponent},
+
     ]
   },
   { path: '**', redirectTo: '/' }  // Redirige a login para rutas no encontradas

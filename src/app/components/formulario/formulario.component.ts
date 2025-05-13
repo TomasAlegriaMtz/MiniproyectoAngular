@@ -28,7 +28,8 @@ export class FormularioComponent {
   };
   carModels : any = [];
   minDate: string;
- 
+ modelosProhibidos = ['Focus', 'Aveo', 'Jetta', 'Beetle'];
+
 
   constructor(public autosNuevosService : ServicioNuevosAutosService, public autosService: ServicioAutosService) {
     // Configurar fecha mínima
@@ -37,6 +38,9 @@ export class FormularioComponent {
     
     
   }
+esModeloPermitido(modelo: string): boolean {
+  return !this.modelosProhibidos.includes(modelo);
+}
 
   successRequest(data:any):void{
     console.log(data);
@@ -81,10 +85,16 @@ export class FormularioComponent {
       });
     }
   }
-  isPistaNoDisponible(date: string): boolean {
-  const dia = new Date(date).getDay(); // domingo = 0, lunes = 1...
-  return dia === 0 || dia === 6; // por ejemplo, fines de semana no disponibles
+ isPistaNoDisponible(date: string): boolean {
+  const d = new Date(date);
+  const diaSemana = d.getDay(); // 0 = domingo, 6 = sábado
+  const diaMes = d.getDate();   // 1 al 31
+
+  // No disponible en fines de semana o días pares
+  return diaSemana === 0 || diaSemana === 6 || diaMes % 2 === 0;
 }
+
+
 
 
 

@@ -37,6 +37,7 @@
               class="form-select"
               required
               #modelControl="ngModel"
+              (ngModelChange)="modelControl.control.setErrors(esModeloPermitido(testDriveModel.model) ? null : { modeloProhibido: true })"
             >
               <option value="">Selecciona un modelo</option>
               @for (item of carModels; track item) {
@@ -46,6 +47,11 @@
             @if (modelControl.invalid && (modelControl.dirty || modelControl.touched)) {
               <div class="alert alert-danger error-message">
                 El modelo es requerido
+              </div>
+            }
+            @if (modelControl.errors?.['modeloProhibido']) {
+              <div class="alert alert-danger error-message">
+                El modelo esta prohibido
               </div>
             }
           </div>
