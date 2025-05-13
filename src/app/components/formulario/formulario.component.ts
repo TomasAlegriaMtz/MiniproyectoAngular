@@ -81,6 +81,11 @@ export class FormularioComponent {
       });
     }
   }
+  isPistaNoDisponible(date: string): boolean {
+  const dia = new Date(date).getDay(); // domingo = 0, lunes = 1...
+  return dia === 0 || dia === 6; // por ejemplo, fines de semana no disponibles
+}
+
 
 
 

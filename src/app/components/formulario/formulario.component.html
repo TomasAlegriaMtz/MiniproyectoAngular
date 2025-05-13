@@ -1,8 +1,24 @@
+<section class="location-section">
+  <h2>Ubicación</h2>
+  <p><strong>Dirección:</strong> Av. Universidad 940, Aguascalientes, Ags.</p>
+  <div class="map-container">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.311649328289!2d-102.31258902570002!3d21.885257580476754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8429eecef2a91d9f%3A0x9b12761ed2b19d5d!2sUniversidad%20Aut%C3%B3noma%20de%20Aguascalientes!5e0!3m2!1ses-419!2smx!4v1715552227207!5m2!1ses-419!2smx"
+      width="100%"
+      height="400"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+</section>
+
+
 <section class="container">
 
  
   <div class="header">
-    <h1>PURE DRIVING PLEASURE</h1>
     <div class="buttons">
       <button  (click)="nuevos()">NUEVOS</button>
       <button  (click)="seminuevos()">SEMINUEVOS</button>
@@ -13,7 +29,7 @@
         <form #testDriveForm="ngForm" (ngSubmit)="onTestDriveSubmit(testDriveForm)">
           <!-- Modelo del Auto -->
           <div class="inp">
-            <label for="model" class="form-label">Modelo del Auto</label>
+            <label for="model" class="label">Modelo del Auto</label>
             <select
               id="model"
               name="model"
@@ -35,7 +51,7 @@
           </div>
           <!--Email-->
         <div class="inp">
-            <label class="form-label">Email:</label>
+            <label class="label">Email</label>
             <input
               type="email"
               [(ngModel)]="testDriveModel.email"
@@ -59,7 +75,7 @@
 
           
           <div class="inp">
-            <label class="form-label">Tipo de Prueba</label>
+            <label class="label">Tipo de Prueba</label>
             <mat-radio-group [(ngModel)]="testDriveModel.prueba" name="prueba" required #pruebaT="ngModel">
               <mat-radio-button value="Pista">Pista</mat-radio-button>
               <mat-radio-button value="Ciudad">Ciudad</mat-radio-button>
@@ -67,11 +83,15 @@
             @if (pruebaT.invalid && (pruebaT.dirty || pruebaT.touched)) {
               <div class="alert alert-danger error-message">Por favor selecciona una opción</div>
             }
+            @if (testDriveModel.testDate && testDriveModel.prueba === 'Pista' && isPistaNoDisponible(testDriveModel.testDate)) {
+               <div class="alert alert-warning error-message">"Pista" no está disponible ese día. Por favor selecciona otra opción.</div>
+            }
+
           </div>
 
           
           <div class="inp">
-            <label for="testDate" class="form-label">Fecha de la Prueba</label>
+            <label for="testDate" class="label">Fecha de la Prueba</label>
             <input
               type="date"
               id="testDate"

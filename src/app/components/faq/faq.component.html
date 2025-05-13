@@ -1,0 +1,17 @@
+<div class="faq-container">
+  <h2>Preguntas Frecuentes</h2>
+
+  @for (faq of faqs; let i = $index; track faq) {
+    <div class="faq-item">
+      <div class="faq-question" (click)="toggle(i)">
+        {{ faq.pregunta }}
+        <span class="icon">{{ faq.abierta ? '−' : '+' }}</span>
+      </div>
+      @if (faq.abierta) {
+        <div class="faq-answer">
+          {{ faq.respuesta }}
+        </div>
+      }
+    </div>
+  }
+</div>

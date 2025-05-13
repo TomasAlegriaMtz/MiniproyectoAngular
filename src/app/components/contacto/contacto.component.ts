@@ -1,9 +1,10 @@
 import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
+import { FaqComponent } from '../faq/faq.component';
 
 @Component({
   selector: 'app-contacto',
   standalone: true,
-  imports: [],
+  imports: [FaqComponent],
 
   templateUrl: './contacto.component.html',
   styleUrls: ['./contacto.component.css']
