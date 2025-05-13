@@ -1,7 +1,9 @@
 <div class="header" [style.background-image]="'url(' + currentImage + ')'">
   <h1>PURE DRIVING PLEASURE</h1>
-  <div class="buttons">
-    <a class="btn" routerLink="/nuevos">NUEVOS</a>
-    <a class="btn" routerLink="/seminuevos">SEMINUEVOS</a>
-  </div>
+  @if(showButtons){
+    <div class="buttons">
+      <a class="btn" routerLink="/nuevos">NUEVOS</a>
+      <a class="btn" routerLink="/seminuevos">SEMINUEVOS</a>
+    </div>
+  }
 </div>

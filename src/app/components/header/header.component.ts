@@ -13,6 +13,7 @@ import { filter } from 'rxjs';
 })
 export class HeaderComponent implements OnInit {
   currentImage: string = '';
+  showButtons: boolean = true;
 
   constructor(private router: Router) {}
 
@@ -37,9 +38,11 @@ export class HeaderComponent implements OnInit {
       '/seminuevos': 'https://cdn.motor1.com/images/mgl/xEyvz/s1/2016-dodge-viper-acr.webp',
       '/contacto': 'https://images.ps-aws.com/c?url=https%3A%2F%2Fd3cm515ijfiu6w.cloudfront.net%2Fwp-content%2Fuploads%2F2023%2F06%2F26141455%2Flance-stroll-fernando-alonso-aston-martin-planet-f1-2023.jpg',
       '/formulario': 'https://www.imsa.com/wp-content/uploads/sites/32/2021/12/08/1_IWSC_BigPicture_820x436.jpg',
-      '/login': 'https://via.placeholder.com/1200x800?text=Login'
+      '/login': 'https://www.bmw-m.com/content/dam/bmw/marketBMW_M/www_bmw-m_com/fastlane/motorsport/2024/wallpaper-motorsport/bmw-m-wallpaper-bmw-hybrid-v8-side-4k.jpg'
     };
-
+   // Mostrar u ocultar botones según la ruta
+    const hideButtonsRoutes = ['/nuevos', '/login', '/seminuevos', '/contacto'];
+    this.showButtons = !hideButtonsRoutes.includes(url);
     // Asignar la imagen según la ruta actual
     this.currentImage = imageMap[url] || 'https://via.placeholder.com/1200x800?text=Default';
   }
