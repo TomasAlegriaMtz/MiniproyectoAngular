@@ -38,9 +38,6 @@ export class FormularioComponent {
     
     
   }
-esModeloPermitido(modelo: string): boolean {
-  return !this.modelosProhibidos.includes(modelo);
-}
 
   successRequest(data:any):void{
     console.log(data);
@@ -65,6 +62,7 @@ esModeloPermitido(modelo: string): boolean {
     console.log(this.carModels)
   }
   onTestDriveSubmit(form: NgForm) {
+   
     if (form.valid) {
       // Guardar testDriveModel en localStorage
       localStorage.setItem('testDriveModel', JSON.stringify(this.testDriveModel));
