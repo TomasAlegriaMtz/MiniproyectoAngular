@@ -1,0 +1,97 @@
+.car-details {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.car-details h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.car-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+.car-info {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.car-info li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 1rem;
+}
+
+.car-info li strong {
+    color: #555;
+}
+
+.car-features {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.car-features li {
+    background-color: #f0f4f8;
+    color: #333;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+p {
+    text-align: center;
+    color: #888;
+    font-size: 1.1rem;
+    margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+    .car-details {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    .car-details h2 {
+        font-size: 1.6rem;
+    }
+
+    .car-info li,
+    .car-features li {
+        font-size: 0.9rem;
+    }
+}
+
+a[routerLink] {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    margin: 1rem 0;
+    background-color: #007bff;
+    color: white;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+a[routerLink]:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}

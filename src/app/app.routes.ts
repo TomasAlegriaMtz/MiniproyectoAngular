@@ -9,6 +9,7 @@ import { AuthGuard } from './auth.guard';
 import { LoginComponent } from './components/routes/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { DatosAdminComponent } from './components/datos-admin/datos-admin.component';
+import { CarComponentComponent } from './components/car-component/car-component.component';
 
 export const routes: Routes = [
  // Ruta para el login
@@ -25,10 +26,9 @@ export const routes: Routes = [
       { path: 'contacto', component: ContactoComponent },
       { path: 'formulario', component: FormularioComponent },
       { path: 'login', component: LoginComponent },
-      { path: 'datos-admin', component: DatosAdminComponent}
-      
+      { path: 'datos-admin', component: DatosAdminComponent},
+      { path: 'carComponent/:id/:isNew', component: CarComponentComponent}
     ]
   },
-
   { path: '**', redirectTo: '/' }  // Redirige a login para rutas no encontradas
 ];

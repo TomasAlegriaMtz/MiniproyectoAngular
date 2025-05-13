@@ -16,7 +16,7 @@
                         <img [src]="item.img" class="card-img-top p-3" alt="Imagen del vehículo"
                             style="max-height: 180px; max-width: 100%; object-fit: contain;">
 
-                        <button class="btn btn-light position-absolute top-0 end-0 m-2 rounded-circle shadow-sm">
+                        <a [routerLink]="['/carComponent',item.id, true]" class="btn btn-light position-absolute top-0 end-0 m-2 rounded-circle shadow-sm">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                                 stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24"
                                 height="24" stroke-width="2">
@@ -25,12 +25,12 @@
                                     d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6">
                                 </path>
                             </svg>
-                        </button>
+                        </a>
 
                     </div>
 
                     <div class="card-body px-4">
-                        <h6 class="text-muted text-uppercase small mb-2">JUAN STORE</h6>
+                        <h6 class="text-muted text-uppercase small mb-2">DRAKO MOTORS</h6>
                         <h5 class="card-title">{{ item.brand | uppercase }} {{ item.model | uppercase }} ({{ item.year
                             }})</h5>
                         <p class="card-text" style="color: #2962FF;">{{ item.price.toFixed(2) | currency }}</p>
@@ -65,6 +65,5 @@
         </div>
     </div>
     }
+    <app-financiamiento></app-financiamiento>
 </div>
-
-<app-financiamiento></app-financiamiento>

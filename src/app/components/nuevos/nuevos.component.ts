@@ -3,11 +3,12 @@ import { ServicioNuevosAutosService } from './servicio-nuevos-autos.service';
 import { CurrencyPipe, DatePipe, UpperCasePipe } from '@angular/common';
 import { BuscadorComponent } from '../buscador/buscador.component';
 import { FinanciamientoComponent } from '../financiamiento/financiamiento.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-nuevos',
   standalone:true,
-  imports: [CurrencyPipe, DatePipe, UpperCasePipe, BuscadorComponent, FinanciamientoComponent],
+  imports: [CurrencyPipe, DatePipe, UpperCasePipe, BuscadorComponent, FinanciamientoComponent, RouterModule],
   templateUrl: './nuevos.component.html',
   styleUrl: './nuevos.component.css'
 })
@@ -29,7 +30,7 @@ export class NuevosComponent {
   }
 
   arrayModified(arrayCarsChanged: any): void {
-    this.array = arrayCarsChanged;
+    this.array = arrayCarsChanged; 
   }
 
   successRequest(data: any): void {

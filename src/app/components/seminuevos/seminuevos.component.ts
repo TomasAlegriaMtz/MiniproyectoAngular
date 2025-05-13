@@ -3,12 +3,13 @@ import { ServicioAutosService } from './servicio-autos.service';
 import { CurrencyPipe, DatePipe, UpperCasePipe } from '@angular/common';
 import { BuscadorComponent } from '../buscador/buscador.component';
 import { FinanciamientoComponent } from '../financiamiento/financiamiento.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-seminuevos',
 
   standalone:true,
-  imports: [CurrencyPipe, UpperCasePipe, DatePipe, BuscadorComponent, FinanciamientoComponent],
+  imports: [CurrencyPipe, UpperCasePipe, DatePipe, BuscadorComponent, FinanciamientoComponent, RouterModule],
 
   templateUrl: './seminuevos.component.html',
   styleUrl: './seminuevos.component.css'
@@ -31,7 +32,7 @@ export class SeminuevosComponent {
   arrayModified(arrayCarsChanged: any): void {
     this.array = arrayCarsChanged;
   }
-
+ 
   successRequest(data: any): void {
     //console.log(data);
     this.arrayCopy = this.array = data.cars;
