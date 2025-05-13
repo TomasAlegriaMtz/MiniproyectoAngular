@@ -1,125 +1,127 @@
-<!-- Descripción de Servicios -->
-<section class="services-description">
-  <h2>Nuestros Servicios</h2>
-  <div class="service-list">
-    <div class="service-item">
-      <img src="https://repuestosmiguel.com/wp-content/uploads/2023/04/falta-mecanicos-reto-taller.jpg" >
-      <h3>Reparación de Motores</h3>
-      <p>Diagnóstico y reparación especializada con garantía.</p>
-    </div>
-    <div class="service-item">
-      <img src="https://stanceauto.co.uk/uploads/images/202404/image_870x580_660bd65f0a45a.webp">
-      <h3>Personalización</h3>
-      <p>Modificaciones a medida para tu vehículo.</p>
-    </div>
-    <div class="service-item">
-      <img src="https://empleosurgentes.com/wp-content/uploads/2020/07/personal-limpieza-de-autos-car-cleaning-staff-lavador-de-autos.jpg">
-      <h3>Lavado y Detalle</h3>
-      <p>Limpieza profunda interior y exterior.</p>
-    </div>
-  </div>
-</section>
-
-<!-- Horarios y Ubicación -->
-<section class="contact-info">
-  <h2>Horarios y Ubicación</h2>
-  <table>
-    <tr><td>Lunes - Viernes</td><td>9:00 - 18:00</td></tr>
-    <tr><td>Sábado</td><td>10:00 - 14:00</td></tr>
-    <tr><td>Domingo</td><td>Cerrado</td></tr>
-  </table>
- 
-</section>
-
-
-<h1>Conoce Nuestros Servicios</h1>
-<form class="form" [formGroup]="form" (ngSubmit)="validar()">
-    <p class="form-title">Servicios</p>
-
-    <div class="flex-column">
-        <label>Nombre Completo</label>
-        <div class="inputForm">
-            
-            <input placeholder="Nombre" class="input" type="text" formControlName="nombre">
+<div class="bodyServices">
+    <!-- Descripción de Servicios -->
+    <section class="services-description">
+      <h2>Nuestros Servicios</h2>
+      <div class="service-list">
+        <div class="service-item">
+          <img src="https://repuestosmiguel.com/wp-content/uploads/2023/04/falta-mecanicos-reto-taller.jpg" >
+          <h3>Reparación de Motores</h3>
+          <p>Diagnóstico y reparación especializada con garantía.</p>
         </div>
-        @if (form.get('nombre')?.hasError('required') && form.get('nombre')?.touched) {
-            <div class="alert alert-danger error-message">El nombre es obligatorio</div>
-        }
-        @if (form.get('nombre')?.hasError('pattern') && form.get('nombre')?.touched) {
-            <div class="alert alert-danger error-message">El nombre no es válido</div>
-        }
-    </div>
-
-    <div class="flex-column">
-        <label>Número de Teléfono</label>
-        <div class="inputForm">
-            
-<input placeholder="Enter your number" class="input" type="text" formControlName="number">
+        <div class="service-item">
+          <img src="https://stanceauto.co.uk/uploads/images/202404/image_870x580_660bd65f0a45a.webp">
+          <h3>Personalización</h3>
+          <p>Modificaciones a medida para tu vehículo.</p>
         </div>
-        @if (form.get('number')?.hasError('required') && form.get('number')?.touched) {
-            <div class="alert alert-danger error-message">El número es obligatorio</div>
-        }
-        @if (form.get('number')?.hasError('pattern') && form.get('number')?.touched) {
-            <div class="alert alert-danger error-message">El número no es válido</div>
-        }
-        @if ((form.get('number')?.hasError('minlength') || form.get('number')?.hasError('maxlength')) && form.get('number')?.touched) {
-            <div class="alert alert-danger error-message">El número debe tener 10 dígitos</div>
-        }
-    </div>
-
-    <div class="flex-column">
-        <label>Modelo del Vehículo</label>
-        <div class="inputForm">
-            
-            <input placeholder="Modelo" class="input" type="text" formControlName="model">
+        <div class="service-item">
+          <img src="https://empleosurgentes.com/wp-content/uploads/2020/07/personal-limpieza-de-autos-car-cleaning-staff-lavador-de-autos.jpg">
+          <h3>Lavado y Detalle</h3>
+          <p>Limpieza profunda interior y exterior.</p>
         </div>
-        @if (form.get('model')?.hasError('required') && form.get('model')?.touched) {
-            <div class="alert alert-danger error-message">El modelo es requerido</div>
-        }
-        @if (form.get('model')?.hasError('pattern') && form.get('model')?.touched) {
-            <div class="alert alert-danger error-message">El modelo es inválido</div>
-        }
-    </div>
-
-    <div class="flex-column">
-        <label>Año del Vehículo</label>
-        <div class="inputForm">
-            <input placeholder="Año" class="input" type="text" formControlName="year">
-        </div>
-        @if (form.get('year')?.hasError('required') && form.get('year')?.touched) {
-            <div class="alert alert-danger error-message">El año del vehículo es requerido</div>
-        }
-        @if (form.get('year')?.hasError('min') && form.get('year')?.touched) {
-            <div class="alert alert-danger error-message">El año del vehículo no tiene que ser menor a 1980</div>
-        }
-        @if (form.get('year')?.hasError('max') && form.get('year')?.touched) {
-            <div class="alert alert-danger error-message">El año del vehículo no tiene que ser mayor a 2025</div>
-        }
-        @if (form.get('year')?.hasError('pattern') && form.get('year')?.touched) {
-            <div class="alert alert-danger error-message">El número es inválido</div>
-        }
-    </div>
-
-    <div class="flex-column">
-        <label>Servicios</label>
-        <div formArrayName="services" class="inputForm">
-            @for (service of servicesList; let i = $index; track service.id) {
-                <div>
-                    <label>
-                        <input type="checkbox" [formControlName]="i" />
-                        {{ service.name }}
-                    </label>
-                </div>
+      </div>
+    </section>
+    
+    <!-- Horarios y Ubicación -->
+    <section class="contact-info">
+      <h2>Horarios y Ubicación</h2>
+      <table>
+        <tr><td>Lunes - Viernes</td><td>9:00 - 18:00</td></tr>
+        <tr><td>Sábado</td><td>10:00 - 14:00</td></tr>
+        <tr><td>Domingo</td><td>Cerrado</td></tr>
+      </table>
+     
+    </section>
+    
+    
+    <h1>Conoce Nuestros Servicios</h1>
+    <form class="form" [formGroup]="form" (ngSubmit)="validar()">
+        <p class="form-title">Servicios</p>
+    
+        <div class="flex-column">
+            <label>Nombre Completo</label>
+            <div class="inputForm">
+                
+                <input placeholder="Nombre" class="input" type="text" formControlName="nombre">
+            </div>
+            @if (form.get('nombre')?.hasError('required') && form.get('nombre')?.touched) {
+                <div class="alert alert-danger error-message">El nombre es obligatorio</div>
+            }
+            @if (form.get('nombre')?.hasError('pattern') && form.get('nombre')?.touched) {
+                <div class="alert alert-danger error-message">El nombre no es válido</div>
             }
         </div>
-        @if (form.get('services')?.hasError('minSelected') && form.get('services')?.touched) {
-            <div class="alert alert-danger error-message">Debes seleccionar al menos un servicio.</div>
-        }
-    </div>
-
-    <button type="submit" class="button-submit" [disabled]="form.invalid">
-        Enviar
-    </button>
-
     
-</form>
+        <div class="flex-column">
+            <label>Número de Teléfono</label>
+            <div class="inputForm">
+                
+    <input placeholder="Enter your number" class="input" type="text" formControlName="number">
+            </div>
+            @if (form.get('number')?.hasError('required') && form.get('number')?.touched) {
+                <div class="alert alert-danger error-message">El número es obligatorio</div>
+            }
+            @if (form.get('number')?.hasError('pattern') && form.get('number')?.touched) {
+                <div class="alert alert-danger error-message">El número no es válido</div>
+            }
+            @if ((form.get('number')?.hasError('minlength') || form.get('number')?.hasError('maxlength')) && form.get('number')?.touched) {
+                <div class="alert alert-danger error-message">El número debe tener 10 dígitos</div>
+            }
+        </div>
+    
+        <div class="flex-column">
+            <label>Modelo del Vehículo</label>
+            <div class="inputForm">
+                
+                <input placeholder="Modelo" class="input" type="text" formControlName="model">
+            </div>
+            @if (form.get('model')?.hasError('required') && form.get('model')?.touched) {
+                <div class="alert alert-danger error-message">El modelo es requerido</div>
+            }
+            @if (form.get('model')?.hasError('pattern') && form.get('model')?.touched) {
+                <div class="alert alert-danger error-message">El modelo es inválido</div>
+            }
+        </div>
+    
+        <div class="flex-column">
+            <label>Año del Vehículo</label>
+            <div class="inputForm">
+                <input placeholder="Año" class="input" type="text" formControlName="year">
+            </div>
+            @if (form.get('year')?.hasError('required') && form.get('year')?.touched) {
+                <div class="alert alert-danger error-message">El año del vehículo es requerido</div>
+            }
+            @if (form.get('year')?.hasError('min') && form.get('year')?.touched) {
+                <div class="alert alert-danger error-message">El año del vehículo no tiene que ser menor a 1980</div>
+            }
+            @if (form.get('year')?.hasError('max') && form.get('year')?.touched) {
+                <div class="alert alert-danger error-message">El año del vehículo no tiene que ser mayor a 2025</div>
+            }
+            @if (form.get('year')?.hasError('pattern') && form.get('year')?.touched) {
+                <div class="alert alert-danger error-message">El número es inválido</div>
+            }
+        </div>
+    
+        <div class="flex-column">
+            <label>Servicios</label>
+            <div formArrayName="services" class="inputForm">
+                @for (service of servicesList; let i = $index; track service.id) {
+                    <div>
+                        <label>
+                            <input type="checkbox" [formControlName]="i" />
+                            {{ service.name }}
+                        </label>
+                    </div>
+                }
+            </div>
+            @if (form.get('services')?.hasError('minSelected') && form.get('services')?.touched) {
+                <div class="alert alert-danger error-message">Debes seleccionar al menos un servicio.</div>
+            }
+        </div>
+    
+        <button type="submit" class="button-submit" [disabled]="form.invalid">
+            Enviar
+        </button>
+    
+        
+    </form>
+</div>

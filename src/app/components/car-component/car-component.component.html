@@ -1,0 +1,32 @@
+<div class="body_car_C">
+    @if (isNew) {
+        <a routerLink="/nuevos">Regresar</a>
+    } @else {
+        <a routerLink="/seminuevos">Regresar</a>
+    }
+    @if (car) {
+    <div class="car-details">
+        <h2>{{ car.brand }} {{ car.model }} ({{ car.year }})</h2>
+        <img [src]="car.img" [alt]="car.brand + ' ' + car.model" class="car-image" />
+    
+        <ul class="car-info">
+            <li><strong>Color:</strong> {{ car.color }}</li>
+            <li><strong>Precio:</strong> ${{ car.price }}</li>
+            <li><strong>Tipo de combustible:</strong> {{ car.fuel_type }}</li>
+            <li><strong>Transmisión:</strong> {{ car.transmission }}</li>
+            <li><strong>Kilometraje:</strong> {{ car.mileage }} km</li>
+            <li><strong>Disponible:</strong> {{ car.available ? 'Sí' : 'No' }}</li>
+            <li><strong>Ubicación:</strong> {{ car.location }}</li>
+        </ul>
+    
+        <h3>Características:</h3>
+        <ul class="car-features">
+            @for (feature of car.features; track feature) {
+            <li>{{ feature }}</li>
+            }
+        </ul>
+    </div>
+    } @else {
+    <p>No se encontró información del vehículo seleccionado.</p>
+    }
+</div>

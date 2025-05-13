@@ -1,0 +1,127 @@
+.car-details {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.car-details h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.car-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+.car-info {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.car-info li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 1rem;
+}
+
+.car-info li strong {
+    color: #555;
+}
+
+.car-features {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.car-features li {
+    background-color: #f0f4f8;
+    color: #333;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+p {
+    text-align: center;
+    color: #888;
+    font-size: 1.1rem;
+    margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+    .car-details {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    .car-details h2 {
+        font-size: 1.6rem;
+    }
+
+    .car-info li,
+    .car-features li {
+        font-size: 0.9rem;
+    }
+}
+a[routerLink] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 1.4rem;
+    margin: 1rem 0;
+    background: linear-gradient(135deg, #4c6ef5, #15aabf);
+    color: #ffffff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(76, 110, 245, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+a[routerLink]::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: skewX(-30deg);
+    transition: left 0.5s ease;
+}
+
+a[routerLink]:hover::before {
+    left: 200%;
+}
+
+a[routerLink]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(76, 110, 245, 0.4);
+}
+
+a[routerLink]:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(76, 110, 245, 0.2);
+}
+
+.body_car_C {
+    background-color: #0d0d0d;
+    padding: 2rem;
+}
