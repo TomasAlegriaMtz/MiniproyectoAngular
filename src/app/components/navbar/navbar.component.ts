@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
 })
 export class NavbarComponent implements DoCheck {
   user!: string;
+  name!: any;
   isLogged: boolean = false;
   showLogout: boolean = false;
 
@@ -22,6 +23,13 @@ export class NavbarComponent implements DoCheck {
       this.isLogged = isLoggedRaw ? Boolean(JSON.parse(isLoggedRaw)) : false;
       this.user = userRaw ? JSON.parse(userRaw) : '';
       this.showLogout = true;
+
+      const acc = localStorage.getItem('accounts');
+      console.log(acc);
+      acc ? 
+      this.name = JSON.parse(acc).find((us: any) => us.username === this.user) :
+      false;
+
     } catch (error) {
       console.error('Error al leer del localStorage:', error);
       this.isLogged = false;

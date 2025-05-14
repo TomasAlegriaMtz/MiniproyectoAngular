@@ -24,9 +24,9 @@ videoUrl: string = 'https://www.youtube.com/embed/5BB4yvRNEg0?autoplay=1&mute=1&
 
     if (this.accounts.length < 1) {
       const defaultAccounts = [
-        { username: 'Admin01', password: 'password_admin01' },
-        { username: 'Admin02', password: 'password_admin02' },
-        { username: 'Admin03', password: 'password_admin03' }
+        { name: 'Juan Mauricio' , username: 'Admin_Juan', password: 'password01' },
+        { name: 'Tomas Alberto' , username: 'Admin_Tomas', password: 'password02' },
+        { name: 'Georgina Salazar' , username: 'Admin_Georgina', password: 'password03' }
       ];
       localStorage.setItem('accounts', JSON.stringify(defaultAccounts));
       this.accounts = defaultAccounts;

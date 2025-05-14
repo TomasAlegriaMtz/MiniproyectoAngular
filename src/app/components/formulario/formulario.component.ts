@@ -18,6 +18,7 @@ import { MatRadioModule } from '@angular/material/radio';
   styleUrls: ['./formulario.component.css'],
 })
 export class FormularioComponent {
+  tests!: any[];
   // Datos para el formulario template-driven
   testDriveModel = {
     model: '',
@@ -26,53 +27,67 @@ export class FormularioComponent {
     testDate: '',
     email: '',
   };
-  carModels : any = [];
+  carModels: any = [];
   minDate: string;
+<<<<<<< HEAD
   maxDate: string;
   modelosProhibidos = ['Focus', 'Aveo', 'Jetta', 'Beetle'];
 
+=======
+  modelosProhibidos = ['Focus', 'Aveo', 'Jetta', 'Beetle'];
+>>>>>>> 7f0f04c9d225f60c76a832d361c6260e7b1eb765
 
 
-  constructor(public autosNuevosService : ServicioNuevosAutosService, public autosService: ServicioAutosService) {
+  constructor(public autosNuevosService: ServicioNuevosAutosService, public autosService: ServicioAutosService) {
     // Configurar fecha mínima
     const today = new Date();
     const maxDateObj = new Date();
     maxDateObj.setDate(today.getDate() + 30); // suma 30 días
     this.maxDate = maxDateObj.toISOString().split('T')[0];
     this.minDate = today.toISOString().split('T')[0];
-    
-    
+
+    //treaemos el array desde el localStorage
+    const data = localStorage.getItem('testDriveModel');
+    data ? 
+    this.tests = JSON.parse(data) :
+    this.tests = [];
+
   }
 
-  successRequest(data:any):void{
+  successRequest(data: any): void {
     console.log(data);
     this.carModels = data.cars;
     console.log(this.carModels)
     
   }
-  nuevos(){
+  nuevos() {
     this.autosNuevosService.getValues().subscribe({
       next: this.successRequest.bind(this),
-      error: (err:any) => {console.log(err)}
+      error: (err: any) => { console.log(err) }
     });
   }
+<<<<<<< HEAD
   seminuevos(){
+=======
+  seminuevos() {
+>>>>>>> 7f0f04c9d225f60c76a832d361c6260e7b1eb765
     this.autosService.getValues().subscribe({
       next: this.successRequestS.bind(this),
-      error: (err:any) => {console.log(err)}
+      error: (err: any) => { console.log(err) }
     });
 
   }
-  successRequestS(data:any):void{
+  successRequestS(data: any): void {
     console.log(data);
     this.carModels = data.cars;
     console.log(this.carModels)
   }
   onTestDriveSubmit(form: NgForm) {
-   
+
     if (form.valid) {
       // Guardar testDriveModel en localStorage
-      localStorage.setItem('testDriveModel', JSON.stringify(this.testDriveModel));
+      this.tests.push(this.testDriveModel);
+      localStorage.setItem('testDriveModel', JSON.stringify(this.tests));
       console.log('Datos guardados en localStorage:', this.testDriveModel);
       // Opcional: Mostrar mensaje de éxito con SweetAlert
       Swal.fire({
@@ -90,6 +105,7 @@ export class FormularioComponent {
       });
     }
   }
+<<<<<<< HEAD
  isPistaNoDisponible(date: string): boolean {
   const [year, month, day] = date.split('-').map(Number);
   const d = new Date(year, month - 1, day); // mes empieza en 0, usa la hora local del navegador
@@ -115,4 +131,15 @@ isModeloProhibido(): boolean {
 
 
  
+=======
+  isPistaNoDisponible(date: string): boolean {
+    const d = new Date(date);
+    const diaSemana = d.getDay(); // 0 = domingo, 6 = sábado
+    const diaMes = d.getDate();   // 1 al 31
+
+    // No disponible en fines de semana o días pares
+    return diaSemana === 0 || diaSemana === 6 || diaMes % 2 === 0;
+  }
+
+>>>>>>> 7f0f04c9d225f60c76a832d361c6260e7b1eb765
 }

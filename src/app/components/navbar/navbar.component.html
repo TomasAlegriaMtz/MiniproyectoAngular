@@ -20,7 +20,7 @@
 
     @if (isLogged) {
     <div class="user-container">
-        <p class="username">{{ this.user }}</p>
+        <p class="username">{{ this.name.name }}</p>
         @if (showLogout) {
         <button class="logout-btn" (click)="logout()">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
