@@ -17,7 +17,7 @@
 
 <section class="container">
 
- 
+  <h1>Selecciona el vehículo</h1>
   <div class="header">
     <div class="buttons">
       <button  (click)="nuevos()">NUEVOS</button>
@@ -31,14 +31,7 @@
           <div class="inp">
             <label for="model" class="label">Modelo del Auto</label>
             <select
-              id="model"
-              name="model"
-              [(ngModel)]="testDriveModel.model"
-              class="form-select"
-              required
-              #modelControl="ngModel"
-             
-            >
+              id="model" name="model" [(ngModel)]="testDriveModel.model" class="form-select" required #modelControl="ngModel">
               <option value="">Selecciona un modelo</option>
               @for (item of carModels; track item) {
                 <option >{{ item.model }}</option>
@@ -58,14 +51,7 @@
           <!--Email-->
         <div class="inp">
             <label class="label">Email</label>
-            <input
-              type="email"
-              [(ngModel)]="testDriveModel.email"
-              name="email"
-              #emailT="ngModel"
-              required
-              email
-            />
+            <input type="email" [(ngModel)]="testDriveModel.email" name="email" #emailT="ngModel" required email/>
             
             @if (emailT.invalid && (emailT.dirty || emailT.touched)) {
               @if (emailT.errors?.['required']) {
@@ -98,16 +84,7 @@
           
           <div class="inp">
             <label for="testDate" class="label">Fecha de la Prueba</label>
-            <input
-              type="date"
-              id="testDate"
-              name="testDate"
-              [(ngModel)]="testDriveModel.testDate"
-              [min]="minDate"
-              required
-              #testDateControl="ngModel"
-              class="form-control"
-            />
+            <input type="date" id="testDate" name="testDate" [(ngModel)]="testDriveModel.testDate" [min]="minDate" [max]="maxDate" required #testDateControl="ngModel" class="form-control" />
             @if (testDateControl.invalid && (testDateControl.dirty || testDateControl.touched)) {
               <div class="alert alert-danger error-message">
                 @if (testDateControl.errors?.['required']) {
@@ -116,13 +93,20 @@
                 @if (testDateControl.errors?.['dateBeforeToday']) {
                   <div>La fecha no puede ser anterior a hoy</div>
                 }
+                @if (testDateControl.errors?.['max']) {
+                  <div>La fecha no puede ser posterior a {{ maxDate | date:'longDate' }}</div>
+                }
+                
               </div>
+            }
+            @if (isPruebaNoDisponible(testDriveModel.testDate)){
+                <div class="alert alert-danger error-message">Las pruebas de manejo no estan disponible los fines de semana</div>
             }
           </div>
 
       
           
-          <button type="submit" class="btn btn-primary" [disabled]="testDriveForm.invalid">
+          <button type="submit" class="btn" [disabled]="testDriveForm.invalid || isModeloProhibido() || isPistaNoDisponible(testDriveModel.testDate)||isPruebaNoDisponible(testDriveModel.testDate)">
             Enviar
           </button>
           
@@ -130,4 +114,3 @@
       
 </section> 
 
-<!--Formulario Reactivo-->

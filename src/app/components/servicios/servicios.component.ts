@@ -38,7 +38,7 @@ export class ServiciosComponent {
   public form: FormGroup = new FormGroup({
     nombre: new FormControl('', [Validators.required, Validators.pattern('[A-Za-z\\s]+')]),
     number: new FormControl('', [Validators.required, Validators.minLength(10), Validators.maxLength(10), Validators.pattern('^[0-9]{10}$')]),
-    model: new FormControl('', Validators.required),
+    model: new FormControl('', [Validators.required, Validators.minLength(4)]),
     year: new FormControl('', [Validators.required, Validators.pattern('^[0-9]{4}$'), Validators.min(1970), Validators.max(2025)]),
     services: new FormArray(
       [

@@ -28,12 +28,17 @@ export class FormularioComponent {
   };
   carModels : any = [];
   minDate: string;
- modelosProhibidos = ['Focus', 'Aveo', 'Jetta', 'Beetle'];
+  maxDate: string;
+  modelosProhibidos = ['Focus', 'Aveo', 'Jetta', 'Beetle'];
+
 
 
   constructor(public autosNuevosService : ServicioNuevosAutosService, public autosService: ServicioAutosService) {
     // Configurar fecha mínima
     const today = new Date();
+    const maxDateObj = new Date();
+    maxDateObj.setDate(today.getDate() + 30); // suma 30 días
+    this.maxDate = maxDateObj.toISOString().split('T')[0];
     this.minDate = today.toISOString().split('T')[0];
     
     
@@ -43,6 +48,7 @@ export class FormularioComponent {
     console.log(data);
     this.carModels = data.cars;
     console.log(this.carModels)
+    
   }
   nuevos(){
     this.autosNuevosService.getValues().subscribe({
@@ -51,10 +57,11 @@ export class FormularioComponent {
     });
   }
   seminuevos(){
-    this.autosNuevosService.getValues().subscribe({
+    this.autosService.getValues().subscribe({
       next: this.successRequestS.bind(this),
       error: (err:any) => {console.log(err)}
     });
+
   }
   successRequestS(data:any):void{
     console.log(data);
@@ -84,18 +91,28 @@ export class FormularioComponent {
     }
   }
  isPistaNoDisponible(date: string): boolean {
-  const d = new Date(date);
-  const diaSemana = d.getDay(); // 0 = domingo, 6 = sábado
-  const diaMes = d.getDate();   // 1 al 31
+  const [year, month, day] = date.split('-').map(Number);
+  const d = new Date(year, month - 1, day); // mes empieza en 0, usa la hora local del navegador
 
-  // No disponible en fines de semana o días pares
-  return diaSemana === 0 || diaSemana === 6 || diaMes % 2 === 0;
+  const diaMes = d.getDate();
+
+  console.log('Día del mes:', diaMes);
+
+  // No disponible en  días pares
+  return  diaMes % 2 === 0;
+}
+isPruebaNoDisponible(date: string): boolean {
+  const [year, month, day] = date.split('-').map(Number);
+  const d = new Date(year, month - 1, day); // mes empieza en 0, usa la hora local del navegador
+  const diaSemana = d.getDay();
+  // No disponible en fines de semana
+  return diaSemana === 0 || diaSemana === 6
+  
+}
+isModeloProhibido(): boolean {
+  return this.modelosProhibidos.includes(this.testDriveModel.model);
 }
 
 
-
-
-
-
-  
+ 
 }

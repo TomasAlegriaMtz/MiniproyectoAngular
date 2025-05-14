@@ -77,9 +77,10 @@
             @if (form.get('model')?.hasError('required') && form.get('model')?.touched) {
                 <div class="alert alert-danger error-message">El modelo es requerido</div>
             }
-            @if (form.get('model')?.hasError('pattern') && form.get('model')?.touched) {
-                <div class="alert alert-danger error-message">El modelo es inválido</div>
+            @if (form.get('model')?.hasError('minlength') && form.get('model')?.touched) {
+                <div class="alert alert-danger error-message">El modelo debe tener más de 3 letras</div>
             }
+            
         </div>
     
         <div class="flex-column">
