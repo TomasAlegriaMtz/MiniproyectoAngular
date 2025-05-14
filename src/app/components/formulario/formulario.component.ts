@@ -18,6 +18,7 @@ import { MatRadioModule } from '@angular/material/radio';
   styleUrls: ['./formulario.component.css'],
 })
 export class FormularioComponent {
+  tests!: any[];
   // Datos para el formulario template-driven
   testDriveModel = {
     model: '',
@@ -26,46 +27,52 @@ export class FormularioComponent {
     testDate: '',
     email: '',
   };
-  carModels : any = [];
+  carModels: any = [];
   minDate: string;
- modelosProhibidos = ['Focus', 'Aveo', 'Jetta', 'Beetle'];
+  modelosProhibidos = ['Focus', 'Aveo', 'Jetta', 'Beetle'];
 
 
-  constructor(public autosNuevosService : ServicioNuevosAutosService, public autosService: ServicioAutosService) {
+  constructor(public autosNuevosService: ServicioNuevosAutosService, public autosService: ServicioAutosService) {
     // Configurar fecha mínima
     const today = new Date();
     this.minDate = today.toISOString().split('T')[0];
-    
-    
+
+    //treaemos el array desde el localStorage
+    const data = localStorage.getItem('testDriveModel');
+    data ? 
+    this.tests = JSON.parse(data) :
+    this.tests = [];
+
   }
 
-  successRequest(data:any):void{
+  successRequest(data: any): void {
     console.log(data);
     this.carModels = data.cars;
     console.log(this.carModels)
   }
-  nuevos(){
+  nuevos() {
     this.autosNuevosService.getValues().subscribe({
       next: this.successRequest.bind(this),
-      error: (err:any) => {console.log(err)}
+      error: (err: any) => { console.log(err) }
     });
   }
-  seminuevos(){
-    this.autosNuevosService.getValues().subscribe({
+  seminuevos() {
+    this.autosService.getValues().subscribe({
       next: this.successRequestS.bind(this),
-      error: (err:any) => {console.log(err)}
+      error: (err: any) => { console.log(err) }
     });
   }
-  successRequestS(data:any):void{
+  successRequestS(data: any): void {
     console.log(data);
     this.carModels = data.cars;
     console.log(this.carModels)
   }
   onTestDriveSubmit(form: NgForm) {
-   
+
     if (form.valid) {
       // Guardar testDriveModel en localStorage
-      localStorage.setItem('testDriveModel', JSON.stringify(this.testDriveModel));
+      this.tests.push(this.testDriveModel);
+      localStorage.setItem('testDriveModel', JSON.stringify(this.tests));
       console.log('Datos guardados en localStorage:', this.testDriveModel);
       // Opcional: Mostrar mensaje de éxito con SweetAlert
       Swal.fire({
@@ -83,19 +90,13 @@ export class FormularioComponent {
       });
     }
   }
- isPistaNoDisponible(date: string): boolean {
-  const d = new Date(date);
-  const diaSemana = d.getDay(); // 0 = domingo, 6 = sábado
-  const diaMes = d.getDate();   // 1 al 31
+  isPistaNoDisponible(date: string): boolean {
+    const d = new Date(date);
+    const diaSemana = d.getDay(); // 0 = domingo, 6 = sábado
+    const diaMes = d.getDate();   // 1 al 31
 
-  // No disponible en fines de semana o días pares
-  return diaSemana === 0 || diaSemana === 6 || diaMes % 2 === 0;
-}
+    // No disponible en fines de semana o días pares
+    return diaSemana === 0 || diaSemana === 6 || diaMes % 2 === 0;
+  }
 
-
-
-
-
-
-  
 }
